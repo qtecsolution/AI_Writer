@@ -3,21 +3,25 @@
 
 .form-group {
     .form-label {
-        @include font($primaryFont,14,normal,normal,24);
+        @include font($primaryFont,14,medium,normal,24);
+        color: $gray-700;
         @include breakpoint(mobile576) {
-          @include font($primaryFont,16,normal,normal,24);
+          @include font($primaryFont,16,medium,normal,24);
         }
     }
     .form-control {
 
-        &.custom-input {
+        &.custom -input {
             @include font($primaryFont,14,normal,normal,24);
+            padding:size(10) size(14);
+            box-shadow: $boxshadow-1;
             @include breakpoint(mobile576) {
               @include font($primaryFont,16,normal,normal,24);
             }
 
             &:focus {
                 box-shadow: none ;
+                border-color: $main;
             }
 
             &::placeholder {

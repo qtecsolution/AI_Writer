@@ -126,7 +126,7 @@ video {
   padding: 0;
 
 	&::selection {
-		@include setBgColor($linear-main, $white);
+		@include setBgColor($main, $white);
 	}
 }
 
