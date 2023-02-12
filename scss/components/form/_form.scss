@@ -1,0 +1,96 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+
+.authentication-wrapper {
+    height: 100vh;
+     @include w100;
+     display: flex;
+     align-items: center;
+     
+    .authentication-form {
+        flex-shrink: 0;
+        @include w100;
+
+        @include flex-column;
+        gap: size(30);
+        &-header {
+            @include flex-center-column;
+            align-items: center;
+            text-align: center;
+            gap: size(10);
+        }
+
+        &-body {
+            @include flex-column;
+            gap: size(12);
+
+            .or {
+                @include flex;
+                align-items: center;
+                gap: size(10);
+                .line {
+                    height: size(1);
+                    background: $gray-200;
+                    flex: 1;
+                    color: $gray-500;
+
+                }
+            }
+
+
+        }
+
+        .authentication-bottom {
+            color: $gray-500;
+            @include font($primaryFont,14,normal,normal,20);
+            text-align: center;
+            @include breakpoint(mobile576) {
+             @include font($primaryFont,16,normal,normal,20);
+
+            }
+
+            a {
+                color: $main;
+
+                @include hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
+
+
+.logo-name {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    background-image: $linear-main;
+    -webkit-background-image:$linear-main;
+
+    @include font($primaryFont,30,bold,normal,41);
+
+    @include breakpoint(mobile576) {
+        @include font($primaryFont,33,bold,normal,41);
+    }
+}
+
+.section-title {
+    color: $gray-900;
+    @include font($primaryFont,28,semibold,normal,41);
+
+    @include breakpoint(mobile576) {
+        @include font($primaryFont,30,semibold,normal,41);
+      }
+}
+
+.form-des {
+    color: $gray-500;
+    @include font($primaryFont,14,normal,normal,24);
+
+    @include breakpoint(mobile576) {
+      @include font($primaryFont,16,normal,normal,24);
+    }
+
+}
