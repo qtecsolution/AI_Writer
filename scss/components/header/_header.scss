@@ -1,3 +1,351 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
+.header {
+    background: $white;
+    @include border-single(bottom, solid, 1, $gray-300);
+    @include flex-between;
+    align-items: center;
+    padding: size(10) size(16);
+    position: sticky;
+    top: 0;
+    left: 0;
+  
+    @include breakpoint(tab992) {
+      padding: (0) size(16);
+      justify-content: flex-end;
+    }
+  
+  
+    // .logo {
+    //   width: size(125);
+    //   height: size(36);
+    //   @include flex-center;
+    //   overflow: hidden;
+  
+    //   @include breakpoint(tab992) {
+    //     display: none;
+    //   }
+  
+    //   img {
+    //     @include wh100;
+    //     object-fit: cover;
+    //   }
+    // }
+  
+   &-nav {
+
+       .headermenu {
+           @include list-horizontal;
+           gap: size(10);
+
+           &-item {
+               position: relative;
+               @include breakpoint(tab992) {
+                padding: size(16) size(0) size(16) size(0);
+               }
+
+               @include hover {
+                   .userdropdown {
+                       display: block;
+                   }
+               }
+
+               .user-info {
+                   @include flex;
+                   gap: size(20);
+
+                   .user-thumb {
+                       @include square(32);
+                       overflow: hidden;
+                       @include circle;
+
+                       img {
+                           @include wh100;
+                           object-fit: cover;
+                       }
+                   }
+
+                   .name-email {
+                       @include flex-column;
+                       display: none;
+                       @include breakpoint(tab992) {
+                        display: flex;
+                       }
+
+                       .name {
+                           color: $gray-700;
+                           @include font($primaryFont, 14, semibold, normal, 20);
+                       }
+
+                       .email {
+                           color: $gray-500;
+                           @include font($primaryFont, 12, normal, normal, 20);
+
+                       }
+
+                   }
+               }
+
+               .userdropdown {
+                   position: absolute;
+                   top: calc(100% - size(8));
+                   right: 0;
+                   background: $white;
+                   box-shadow: $boxshadow-2;
+                   display: none;
+                   @extend %animation;
+                   @extend %slideUpIn;
+                   width: size(160);
+                   @include border(solid,1,$gray-100); 
+                   @include radius(8);
+
+                   .name-email-mobile {
+                    @include flex-column;
+                    align-items: center;
+                    padding: size(20) size(0);
+                    
+                    @include breakpoint(tab992) {
+                     display: none;
+                    }
+
+                    .name {
+                        color: $gray-700;
+                        @include font($primaryFont, 14, semibold, normal, 20);
+                    }
+
+                    .email {
+                        color: $gray-500;
+                        @include font($primaryFont, 12, normal, normal, 20);
+
+                    }
+                   }
+                   .userlist {
+                    @include list-vertical;
+                  
+                    &-item {
+
+                    }
+                    &-link {
+                        color: $gray-900;
+                        padding: size(10) size(14);
+                        @include transitionsall;
+                        @include font($primaryFont,14,medium,normal,20);
+                        display:block;
+                        text-align: center;
+                        @include breakpoint(tab992) {
+                            text-align: left;
+                        }
+                        @include hover {
+                            @include setBgColor($gray-50,$gray-700)
+                        }
+                    }
+                   }
+               }
+           }
+       }
+   }
+  
+    // &-nav {
+    //   .iconlist {
+    //     @include list-horizontal;
+  
+    //     &-item {
+    //       cursor: pointer;
+    //       position: relative;
+    //       padding: size(15.5) size(5);
+  
+    //       .btn-mode,
+    //       .btn-notification,
+    //       .btn-user {
+    //         @include circle;
+    //         @include square(40);
+    //         @include flex-center;
+    //       }
+  
+    //    
+  
+    //    
+  
+    //     
+    //       .notify,
+    //       .userdropdown {
+    //         position: absolute;
+    //         top: calc(100% + size(1));
+    //         right: 0;
+    //         background: $white;
+    //         box-shadow: $box-shadow-1;
+    //         display: none;
+    //         @extend %animation;
+    //         @extend %slideUpIn;
+    //       }
+  
+    //       .notify {
+    //         width: size(280);
+  
+  
+  
+  
+    //           &-body {
+    //             .emptynotification {
+    //               @include w100;
+    //               height: size(200);
+    //               @include flex-center;
+    //               text-align: center;
+  
+    //               &-title {
+    //                 color: $darkPrimary;
+    //                 @include font($primaryFont, 13, normal, normal, 18.2);
+    //               }
+    //             }
+  
+    //             .notificationlist {
+    //               max-height: size(316);
+    //               overflow-x: hidden;
+    //               overflow-y: scroll;
+    //               @include list-vertical;
+  
+    //               &-link {
+    //                 @include flex;
+    //                 gap: size(10);
+    //                 padding: size(8) size(16);
+    //                 background: $white;
+    //                 @include border-single(bottom, solid, 1, $headerborder);
+  
+    //                 .usericon {
+    //                   @include square(48);
+    //                   @include circle;
+    //                   @include flex-center;
+    //                   overflow: hidden;
+  
+    //                   img {
+    //                     @include wh100;
+    //                     object-fit: cover;
+    //                   }
+    //                 }
+  
+    //                 .details {
+    //                   width: calc(100% - size(48));
+    //                   @include flex-column;
+    //                   gap: size(4);
+  
+    //                   .info {
+    //                     .name {
+    //                       color: $darkPrimary;
+    //                       @include font($primaryFont, 13, semibold, normal, 18.2);
+    //                     }
+  
+    //                     .text {
+    //                       color: $textPrimary;
+    //                       @include font($primaryFont, 12, normal, normal, 16.8);
+    //                     }
+    //                   }
+  
+    //                   .time {
+    //                     color: $textSecondary;
+    //                     @include font($primaryFont, 12, normal, normal, 16.8);
+    //                   }
+    //                 }
+  
+    //                 @include hover {
+    //                   background: lighten($textSecondary, 32%);
+    //                 }
+    //               }
+  
+    //               &-item {
+    //                 &:last-of-type {
+    //                   .notificationlist-link {
+    //                     border-bottom: 0;
+    //                   }
+    //                 }
+    //               }
+  
+    //               &::-webkit-scrollbar {
+    //                 background: transparent;
+    //                 width: size(8);
+    //               }
+  
+    //               &::-webkit-scrollbar-thumb {
+    //                 background: $checkborder;
+    //                 @include radius(8);
+    //               }
+    //             }
+    //           }
+  
+    //           &-footer {
+    //             background: $white;
+    //             @include border-single(top, solid, 1, $headerborder);
+    //             height: size(40);
+    //             @include flex-center;
+  
+    //             .link {
+    //               color: $textPrimary;
+    //               @include font($primaryFont, 12, medium, normal, 16.8);
+    //               @include transitionscolor;
+  
+    //               @include hover {
+    //                 color: $black;
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+  
+    //       .userdropdown {
+    //         width: size(130);
+  
+    //         @include breakpoint(mobile768) {
+    //           width: size(150);
+    //         }
+  
+    //         .userlist {
+    //           @include list-vertical;
+  
+    //           &-link {
+    //             @include border-single(bottom, solid, 1, $headerborder);
+    //             padding: size(10) size(12);
+    //             @include flex-center-vert;
+    //             gap: size(8);
+    //             @include w100;
+    //             background: $white;
+  
+    //             .icon {
+    //               @include square(16);
+    //               @include flex-center;
+    //               overflow: hidden;
+  
+    //               svg {
+    //                 @include wh100;
+    //               }
+    //             }
+  
+    //             .text {
+    //               color: $textPrimary;
+    //               @include font($primaryFont, 13, normal, normal, 18.2);
+    //             }
+  
+    //             @include hover {
+    //               background: lighten($textSecondary, 30%);
+    //             }
+    //           }
+  
+    //           &-item {
+    //             &:last-of-type {
+    //               .userlist-link {
+    //                 border-bottom: 0;
+    //               }
+    //             }
+    //           }
+    //         }
+    //       }
+  
+    //       @include hover {
+    //         .notify,
+    //         .userdropdown {
+    //           display: block;
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
+  }

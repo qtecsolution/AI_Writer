@@ -2,18 +2,17 @@
 @use '../../partials' as *;
 
 .form-group {
+    position: relative;
     .form-label {
         @include font($primaryFont,14,medium,normal,24);
         color: $gray-700;
-        @include breakpoint(mobile576) {
-          @include font($primaryFont,16,medium,normal,24);
-        }
+        
     }
     .form-control {
 
-        &.custom -input {
+        &.custom-input {
             @include font($primaryFont,14,normal,normal,24);
-            padding:size(10) size(14);
+            padding:size(8) size(14);
             box-shadow: $boxshadow-1;
             @include breakpoint(mobile576) {
               @include font($primaryFont,16,normal,normal,24);
@@ -21,24 +20,26 @@
 
             &:focus {
                 box-shadow: none ;
-                border-color: $main;
+                
             }
 
             &::placeholder {
              @include font($primaryFont,14,normal,normal,24);
-
              @include breakpoint(mobile576) {
-             @include font($primaryFont,16,normal,normal,24);
-
+                @include font($primaryFont,16,normal,normal,24);
              }
+            
 
             }
         }
     }
-}
 
-.form-control {
-    &:focus {
-        box-shadow: none !important;
+    .show-hide {
+        position: absolute;
+        right: size(10);
+        top: 56%;
+        cursor: pointer;
+        
     }
 }
+
