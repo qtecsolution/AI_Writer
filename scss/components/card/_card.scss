@@ -1,6 +1,41 @@
 @use '../../global'as *;
 @use '../../partials'as *;
 
+.template-card {
+    @include border(solid,1,$gray-300);
+    padding: size(16);
+    @include radius(10);
+    @include flex-column;
+    gap: size(10);
+
+
+    @include breakpoint(tab992) {
+        padding: size(20);
+    }
+
+    .card-img {
+        @include square(30);
+        overflow: hidden;
+
+        img {
+            @include wh100;
+            object-fit: cover;
+        }
+
+
+    }
+
+    .card-title {
+        color: $gray-800;
+        @include font($primaryFont,14,bold,normal,20);
+    }
+
+    .card-des {
+        color: $gray-600;
+        @include font($primaryFont,14,normal,normal,18);
+    }
+}
+
 
 
 

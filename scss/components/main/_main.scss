@@ -5,7 +5,7 @@
     @include w100;
   
     @include breakpoint(tab992) {
-      width: calc(100% - size(170));
+      width: calc(100% - size(140));
       margin-left: auto;
     }
 }

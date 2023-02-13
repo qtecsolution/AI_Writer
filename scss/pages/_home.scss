@@ -1,4 +1,54 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.main-content {
+
+    padding: size(30);
+    @include breakpoint(tab992) {
+        padding: size(30) size(50);
+    }
+}
+
+.welcome {
+    padding-bottom: size(30);
+    &-title {
+        @include font($primaryFont,26,semibold,normal,38);
+        color: $gray-800;
+        padding: size(10) size(0);
+
+        @include breakpoint(mobile576) {
+         @include font($primaryFont,30,semibold,normal,38);
+        }
+    }
+
+    &-text {
+        @include font($primaryFont,14,normal,normal,24);
+        color: $gray-800;
+
+        @include breakpoint(mobiel576) {
+         @include font($primaryFont,16,normal,normal,24);
+        }
+    }
+}
+
+.popular-template {
+    
+    @include flex-column;
+    gap: size(16);
+
+    &-header {
+        @include border-single(bottom,solid,1,$gray-300); 
+        padding-bottom: size(12);
+
+        .header-title {
+            color: $gray-800; 
+            @include font($primaryFont,16,bold,normal,24);
+        }
+    }
+
+    &-body {
+
+    }
+}
+
 
