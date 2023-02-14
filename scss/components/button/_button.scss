@@ -79,6 +79,7 @@ button,
     position: fixed;
     bottom: size(20);
     right: size(20);
+    z-index: 4;
     @include breakpoint(tab992) {
       display: none;
     }

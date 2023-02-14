@@ -7,12 +7,14 @@
     @include radius(10);
     @include flex-column;
     gap: size(10);
-
-
+    @include transitionsall;
+    // min-width: size(180); 
+    min-width: size(170);
+    max-width: size(290);
     @include breakpoint(tab992) {
         padding: size(20);
     }
-
+ 
     .card-img {
         @include square(30);
         overflow: hidden;
@@ -34,6 +36,12 @@
         color: $gray-600;
         @include font($primaryFont,14,normal,normal,18);
     }
+
+    @include hover {
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+    }
+
+  
 }
 
 
