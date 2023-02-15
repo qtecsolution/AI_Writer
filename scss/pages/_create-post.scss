@@ -1,0 +1,57 @@
+@use '../global' as *;
+@use '../partials' as *;
+
+.crate-post {
+ 
+    height: 100%;
+    @include flex-column;
+    
+    &-header {
+        height: size(50);
+    }
+
+    &-body {
+        height: calc(100% - 50px);
+    }
+}
+
+.create-post-form {
+
+    @include flex-column;
+    justify-content: space-between;
+    gap: size(14);
+    
+     
+    height: 100%;
+
+    .form-group {
+        .form-label {
+
+        }
+    }
+    
+}
+
+.generate-btn-wrapper {
+    padding-bottom: size(70);
+    @include flex-end;
+}
+
+// profile page 
+
+.myprofile {
+    max-width: size(660);
+
+    .form-group.email-icon {
+        position: relative;
+        input {
+            padding-left: size(35) ;
+        }
+        i.fa {
+            position: absolute;
+            top: size(45);
+            left: size(10);
+        
+        }
+    }
+}
