@@ -4,13 +4,22 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Social Media Organizer</title>
+        <title>Create Post </title>
 
         <!-- BOOTSTRAP CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
+     
+    
         <!-- MAIN CSS  -->
         <link rel="stylesheet" href="assets/css/style.min.css">
+         <!-- FONTAWESOME  -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- SUMMERNOTE CS  -->
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+        <style>
+ 
+        </style>
     </head>
     <body >
         <!-- SIDEBAR MENU START -->
@@ -81,7 +90,125 @@
                 </nav>
             </header>
             <div class="main-content">
-               <h3>CREATE POST</h3>
+               <div class="row g-4">
+                <div class="col-lg-5">
+
+                    <div class="crate-post ps-4">
+                         <h3 class="crate-post-header">Create Post</h3>
+
+                         <div class="crate-post-body">
+
+                            <form action="" class="authentication-form needs-validation" novalidate>
+
+                               
+        
+                                <div class="authentication-form-body">
+        
+                                    <!-- Title    -->
+                                    <div class="form-group">
+                                        <label for="title" class="form-label">Title</label>
+                                        <input type="text" class="form-control custom-input" id="title" required autocomplete="off" placeholder="Enter post title here">
+                                        <div class="valid-feedback">
+                                            Awesome! You're one step closer to greatness.
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter a title 
+                                        </div>
+                                    </div>
+        
+                                    <!-- Keywords -->
+        
+                                    <div class="form-group">
+                                        <label for="keywords" class="form-label">Keywords</label>
+                                        <input type="text" class="form-control custom-input" id="keywords" required autocomplete="off" placeholder="Enter your keywords">
+                                        <div class="valid-feedback">
+                                            Awesome! You're one step closer to greatness.
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter keywords
+                                        </div>
+                                    </div>
+
+                                    <!-- description  -->
+                                    <div class="form-group">
+                                        <label for="description" class="form-label">Describe your post</label>
+                                        <textarea class="form-control custom-input" id="description" required autocomplete="off" placeholder="Describe our post"></textarea>
+                                        <div class="valid-feedback">
+                                            Awesome! You're one step closer to greatness.
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter your description 
+                                        </div>
+                                    </div>
+
+                                    <!-- select tone  -->
+
+                                    <div class="form-group">
+                                        <label for="keywords" class="form-label">Select Tone</label>
+                                        <select name="" id="" class="nice-select w-100" style="opacity: 0; width: 0px; padding: 0px; height: 0px;">
+                                            <option value="danish">DA</option>
+                                            <option value="dutch">NL</option>
+                                            <option value="douch">EN</option>
+                                            <option value="bangla">Bn</option>
+                                        </select>
+                                        <div class="valid-feedback">
+                                            Awesome! You're one step closer to greatness.
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Please enter keywords
+                                        </div>
+                                    </div>
+                                   
+                                    
+                                 
+        
+
+                                    <!-- button -->
+                                    <div>
+                                        <button class="generate-btn">Generate post</button>
+                                    </div>
+        
+                                </div>
+                            </form>
+
+                         </div>
+                    </div>
+
+                </div>
+                <div class="col-lg-7 border-start">
+                    <div class="title-box ">
+                        <input type="text" placeholder="Title">
+                     </div>
+                    <div id="summernote">
+                        <!-- default value -->
+                        
+                    </div>
+                     
+                </div>
+               </div>
+
+               <!-- coutn -->
+               <div class="count sticky-bottom">
+                <div class="left">
+                    <span class="words">341 Words</span>
+                    <span class="charecters">34851574 Characters</span>
+                </div>
+
+                <div class="right">
+                    <button>
+                        <i class="fa fa-random" aria-hidden="true"></i>
+                        <span>Regenerate</span>
+                    </button>
+                    <button>
+                        <i class="fa fa-copy"></i>
+                        <span>copy</span>
+                    </button>
+                    <button>
+                        <i class="fa fa-save"></i>
+                        <span>save</span>
+                    </button>
+                </div>
+               </div>
             </div>
         </main>
         <!-- MAIN SECTION END -->
@@ -91,9 +218,40 @@
 
         <!-- BOOTSTRAP JS   -->
         <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="assets/js/bootstrap-validation.js"></script>
         
         <!--NICE SELECT 2  JS-->
         <script src="assets/js/niceselect2/nice-select2.min.js"></script>
         <script src="assets/js/niceselect2/nice-select-2-bind.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#summernote').summernote({
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'clear']],
+                    ['fontsize', ['fontsize']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['insert', ['link', 'picture','list']],
+                    ['color', ['forecolor']],
+                    ['height', ['height']]
+                ],
+                colorNames: {
+                    'red': '#ff0000',
+                    'green': '#00ff00',
+                    'blue': '#0000ff'
+                }
+            });
+
+            // these code for fixing some style in editor 
+            var styleEle = $("style#fixed");
+            if (styleEle.length == 0)
+                $("<style id=\"fixed\">.note-editor .dropdown-toggle::after { all: unset; } .note-editor .note-dropdown-menu { box-sizing: content-box; } .note-editor .note-modal-footer { box-sizing: content-box; }</style>")
+                    .prependTo("body");
+        })
+    </script>
     </body>
 </html>

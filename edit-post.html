@@ -9,8 +9,17 @@
         <!-- BOOTSTRAP CSS -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css">
 
+     
+    
         <!-- MAIN CSS  -->
         <link rel="stylesheet" href="assets/css/style.min.css">
+         <!-- FONTAWESOME  -->
+         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <!-- SUMMERNOTE CS  -->
+        <link href="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.css" rel="stylesheet">
+        <style>
+ 
+        </style>
     </head>
     <body >
         <!-- SIDEBAR MENU START -->
@@ -81,7 +90,37 @@
                 </nav>
             </header>
             <div class="main-content">
-               <h3>edit post</h3>
+               <div class="row">
+                <div class="col-12">
+                    <div class="title-box ">
+                        <input type="text" placeholder="Title" value="Title : How to be More Productive at the Office?">
+                     </div>
+                    <div id="summernote">
+                        <!-- default value -->
+                        <p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"><span style="font-weight: 700;">How to be More Productive at the Office?</span></span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;">Working in an office can be both challenging and rewarding. With so many distractions, it can be difficult to stay focused and productive.</span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"> However, by making a few small changes, you can increase your productivity and achieve your goals. Here are some tips to help you</span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"> be more productive at the office.</span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"><br></span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"><span style="font-weight: 700;">1.Prioritize your tasks Start each day by making a to-do list and prioritize your tasks based on importance and urgency.</span></span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"><span style="font-weight: 700;"><br></span></span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;">This will help you stay organized and focused on what needs to be done. By completing the most important tasks first, you will feel a</span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"> sense of accomplishment and be able to tackle the rest of your day with confidence.</span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"><br></span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"><span style="font-weight: 700;">2.Minimize distractions Distractions are a major obstacle to productivity.</span></span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"><span style="font-weight: 700;"><br></span></span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;">To minimize distractions, consider closing your door, putting on headphones, or working in a quiet area of the office. You may also want</span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"> to turn off notifications on your phone or computer and limit checking email to specific times of the day.</span></p><p><span style="color: rgb(0, 0, 0); font-family: sans-serif; font-size: 16px;"><br></span></p><p><br></p>
+                    </div>
+                     
+                </div>
+               </div>
+
+               <!-- coutn -->
+               <div class="count sticky-bottom">
+                <div class="left">
+                    <span class="words">341 Words</span>
+                    <span class="charecters">34851574 Characters</span>
+                </div>
+
+                <div class="right">
+                    <button>
+                        <i class="fa fa-copy"></i>
+                        <span>copy</span>
+                    </button>
+                    <button>
+                        <i class="fa fa-save"></i>
+                        <span>save</span>
+                    </button>
+                </div>
+               </div>
             </div>
         </main>
         <!-- MAIN SECTION END -->
@@ -95,5 +134,35 @@
         <!--NICE SELECT 2  JS-->
         <script src="assets/js/niceselect2/nice-select2.min.js"></script>
         <script src="assets/js/niceselect2/nice-select-2-bind.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.18/dist/summernote-lite.min.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('#summernote').summernote({
+                toolbar: [
+                    ['style', ['style']],
+                    ['font', ['bold', 'italic', 'underline', 'clear']],
+                    ['fontsize', ['fontsize']],
+                    ['para', ['ul', 'ol', 'paragraph']],
+                    ['insert', ['link', 'picture','list']],
+                    ['color', ['forecolor']],
+                    ['height', ['height']]
+                ],
+                colorNames: {
+                    'red': '#ff0000',
+                    'green': '#00ff00',
+                    'blue': '#0000ff'
+                }
+            });
+
+            // these code for fixing some style in editor 
+            var styleEle = $("style#fixed");
+            if (styleEle.length == 0)
+                $("<style id=\"fixed\">.note-editor .dropdown-toggle::after { all: unset; } .note-editor .note-dropdown-menu { box-sizing: content-box; } .note-editor .note-modal-footer { box-sizing: content-box; }</style>")
+                    .prependTo("body");
+        })
+    </script>
     </body>
 </html>

@@ -1,23 +1,7 @@
 @use '../../global' as *;
 @use '../../partials' as *;
 
-button, 
-[type='button'], 
-[type='reset'], 
-[type='submit'] {
-  cursor: pointer;
-  border: none;
-  @include transparent-button;
-  opacity: 1;
-  margin: 0;
-  padding: 0;
-  @include transitionsall;
 
-  &:focus {
-    box-shadow: none;
-    outline: none;
-  }
-}
 
 .gradient-btn {
   background-image: $linear-main;
@@ -27,7 +11,7 @@ button,
   @include w100;
   color: $white;
   @include font($primaryFont, 14, semibold, normal, 24);
-
+  border: none;
   @include breakpoint (mobile576) {
     @include font($primaryFont, 16, semibold, normal, 24);
     @include transitionsall;
@@ -101,4 +85,20 @@ button,
   }
 }
 
+
+.generate-btn {
+  background-image: $linear-main;
+  color: $white;
+  @include radius(14);
+  @include flex-center;
+  @include border(solid, 5, hsl(234, 100%, 95%));
+  @include font($primaryFont, 16, normal, normal, 24);
+  @include transitionsall;
+  padding: size(8);
+
+  @include hover {
+    border-color: lighten($main, 45%);
+    color: $white;
+  }
+}
 
