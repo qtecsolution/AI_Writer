@@ -90,7 +90,7 @@
                 </ul>
             </nav>
         </header>
-        <div class="main-content">
+        <div class="main-content p-2 p-md-4">
             <div class="myprofile">
 
                 <div class="myprofile-header">
@@ -99,7 +99,7 @@
                 </div>
 
                 <form action="" class="profile-form needs-validation" novalidate >
-                    <div class="row ">
+                    <div class="row  g-4">
 
                          <!-- First name     -->
                         <div class="col-6 col-lg-6 ">
@@ -107,7 +107,7 @@
                             <div class="form-group">
                                 <label for="fname" class="form-label">First name</label>
                                 <input type="text" class="form-control custom-input" id="fname" required
-                                    autocomplete="off" placeholder="Enter post first name">
+                                    autocomplete="off" placeholder="Enter your first name">
                                 <div class="valid-feedback">
                                     Awesome! You're one step closer to greatness.
                                 </div>
@@ -120,14 +120,14 @@
                         <!-- Last name     -->
                         <div class="col-6 col-lg-6">
                             <div class="form-group">
-                                <label for="fname" class="form-label">First name</label>
-                                <input type="text" class="form-control custom-input" id="fname" required
-                                    autocomplete="off" placeholder="Enter post first name">
+                                <label for="lname" class="form-label">First name</label>
+                                <input type="text" class="form-control custom-input" id="lname" required
+                                    autocomplete="off" placeholder="Enter your first name">
                                 <div class="valid-feedback">
                                     Awesome! You're one step closer to greatness.
                                 </div>
                                 <div class="invalid-feedback">
-                                    Please enter first name here
+                                    Please enter  last name here
                                 </div>
                             </div>
                         </div>
@@ -137,10 +137,10 @@
                             <div class="form-group email-icon ">
                                 <label for="email" class="form-label">Email</label>
                                 <input type="email" class="form-control custom-input " id="email" required
-                                    autocomplete="off" placeholder="Enter post first name">
+                                    autocomplete="off" placeholder="Enter your email ">
 
-                                    <i class=" fa fa-envelope  " aria-hidden="true"></i>
-                                </span>    
+                                    <span class=""><i class=" fa fa-envelope  " aria-hidden="true"></i></span>
+                                       
                                 <div class="valid-feedback">
                                     Awesome! You're one step closer to greatness.
                                 </div>
@@ -150,12 +150,73 @@
                             </div>
                         </div>
 
+
+                        <!-- Password     -->
+                        <div class="col-6 col-lg-6 ">
+                                            
+                            <div class="form-group">
+                                <label for="password" class="form-label">First name</label>
+                                <input type="password" class="form-control custom-input" id="password" required
+                                    autocomplete="off" placeholder="Password">
+                                <div class="valid-feedback">
+                                    Awesome! You're one step closer to greatness.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Please enter valid password
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Confirm Password     -->
+                        <div class="col-6 col-lg-6">
+                            <div class="form-group">
+                                <label for="confirm-pass" class="form-label">Confirm Password</label>
+                                <input type="text" class="form-control custom-input" id="confirm-pass" required
+                                    autocomplete="off" placeholder="Enter post first name">
+                                <div class="valid-feedback">
+                                    Awesome! You're one step closer to greatness.
+                                </div>
+                                <div class="invalid-feedback">
+                                    Enter confirm password
+                                </div>
+                            </div>
+                        </div>
+
+                        
+                        <!-- profile-upload -->
+                        <div class="col-12">
+                            <div class="profile-upload">
+                                <figure class="profile-thumb">
+                                    <img src="assets/images/user.png" alt="user thumb">
+                                </figure>
+
+                                <input type="file" id="profile-pic" hidden>
+                                <label class="upload-box" for="profile-pic">
+
+                                    <div class="icon-wrapper">
+                                        <i class="fa fa-cloud-upload" aria-hidden="true"></i>
+                                    </div>
+                                    <p class="upload-text"><span>Click to upload</span> or drag and drop</p>
+                                    <p class="upload-text">SVG, PNG, JPG or GIF (max. 800x400px)</p>
+
+                                </label>
+                            </div>
+                            
+                        </div>
+
+                        <div class="col-12">
+                            <div class="button-wrapper">
+                                <button type="button" class="btn-cancel-change">cancel</button>
+                                <button class="btn-savechange">Save changes</button>
+                            </div>
+                        </div>
+
+
                          
 
 
                     </div>
                 </form>
-
 
             </div>
         </div>
@@ -167,10 +228,19 @@
 
     <!-- BOOTSTRAP JS   -->
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/bootstrap-validation.js"></script>
 
     <!--NICE SELECT 2  JS-->
     <script src="assets/js/niceselect2/nice-select2.min.js"></script>
     <script src="assets/js/niceselect2/nice-select-2-bind.js"></script>
+     
+
+    <script>
+        document.getElementById('profile-pic').onchange=function() {
+        
+           alert(this.files[0].name);
+        }
+    </script>
 </body>
 
 </html>

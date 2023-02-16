@@ -102,3 +102,45 @@
   }
 }
 
+
+  .btn-savechange {
+  border: none;
+  background: transparent;
+  padding: size(6) size(16);
+  background: $linear-main;
+  color: $white;
+  @include radius(8);
+  @include transitionsall;
+  
+  @include font($primaryFont,14,medium,normal,28);
+
+  @include breakpoint(mobile576) {
+    @include font($primaryFont,16,medium,normal,28);
+    padding: size(10) size(16);
+
+  }
+
+}
+
+.btn-cancel-change {
+  border: none;
+  background: $white;
+  @include border(solid,1,$gray-300);
+  @include radius(8);
+  padding: size(6) size(16);
+  box-shadow: $boxshadow-1;
+  @include transitionsall;
+  @include hover {
+      background: darken($white,5%);
+      
+  }
+
+      @include font($primaryFont,14,medium,normal,28);
+
+      @include breakpoint(mobile576) {
+        @include font($primaryFont,16,medium,normal,28);
+        padding: size(10) size(16);
+
+      }
+
+}

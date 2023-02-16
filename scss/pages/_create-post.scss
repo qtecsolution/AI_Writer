@@ -37,21 +37,3 @@
     @include flex-end;
 }
 
-// profile page 
-
-.myprofile {
-    max-width: size(660);
-
-    .form-group.email-icon {
-        position: relative;
-        input {
-            padding-left: size(35) ;
-        }
-        i.fa {
-            position: absolute;
-            top: size(45);
-            left: size(10);
-        
-        }
-    }
-}
