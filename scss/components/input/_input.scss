@@ -35,9 +35,12 @@
 
     .show-hide {
         position: absolute;
-        right: size(10);
-        top: 56%;
+        right: size(30);
+        top:size(43);
         cursor: pointer;
+        i.fa {
+            color: #D0D5DD!important;
+        }
         
     }
 }

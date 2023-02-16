@@ -77,6 +77,10 @@
             @include hover {
                 box-shadow: $boxshadow-1;
             }
+            @include breakpoint(tab992) {
+            @include font($primaryFont,14,medium,normal,20);
+
+            }
 
         }
     }

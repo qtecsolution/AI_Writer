@@ -96,138 +96,152 @@
                 </ul>
             </nav>
         </header>
-        <div class="main-content">
+
+        <div class="main-content p-2 p-md-4 pt-0">
             <div class="row g-4">
-                <div class="col-lg-5">
 
-                    <div class="crate-post ps-4">
-                        <h3 class="crate-post-header">Create Post</h3>
+                <!-- create post column -->
+                <div class="col-lg-5 mt-0">
 
-                        <div class="crate-post-body">
+                    <div class="create-post">
+                        <form action="" class="createpost-form  needs-validation  h-100 d-flex flex-column  justify-content-between" novalidate>
 
-                            <form action="" class="create-post-form needs-validation" novalidate>
-                                <div class="form-inputs">
+                            <div class="form-content">
+                                <h3 class="create-post-header">Create Post</h3>
+
+                                <div class="row g-4">
+
                                     <!-- Title    -->
-                                    <div class="form-group">
-                                        <label for="title" class="form-label">Title</label>
-                                        <input type="text" class="form-control custom-input" id="title" required autocomplete="off"
-                                            placeholder="Enter post title here">
-                                        <div class="valid-feedback">
-                                            Awesome! You're one step closer to greatness.
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please enter a title
-                                        </div>
-                                    </div>
-                                
-                                    <!-- Keywords -->
-                                
-                                    <div class="form-group">
-                                        <label for="keywords" class="form-label">Keywords</label>
-                                        <input type="text" class="form-control custom-input" id="keywords" required autocomplete="off"
-                                            placeholder="Enter your keywords">
-                                        <div class="valid-feedback">
-                                            Awesome! You're one step closer to greatness.
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please enter keywords
+                                    <div class="col-12"> 
+                                        <div class="form-group">
+                                            <label for="title" class="form-label">Title</label>
+                                            <input type="text" class="form-control custom-input" id="title" required autocomplete="off"
+                                                placeholder="Enter post title here">
+                                            <div class="valid-feedback">
+                                                Awesome! You're one step closer to greatness.
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter a title
+                                            </div>
                                         </div>
                                     </div>
-                                
-                                    <!-- description  -->
-                                    <div class="form-group">
-                                        <label for="description" class="form-label">Describe your post</label>
-                                        <textarea class="form-control custom-input" id="description" required autocomplete="off"
-                                            placeholder="Describe our post"></textarea>
-                                        <div class="valid-feedback">
-                                            Awesome! You're one step closer to greatness.
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please enter your description
+
+                                    <!-- keywords -->
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="keywords" class="form-label">Keywords</label>
+                                            <input type="text" class="form-control custom-input" id="keywords" required autocomplete="off"
+                                                placeholder="Enter your keywords">
+                                            <div class="valid-feedback">
+                                                Awesome! You're one step closer to greatness.
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter keywords
+                                            </div>
                                         </div>
                                     </div>
-                                
-                                    <!-- select tone  -->
-                                    <div class="form-group">
-                                        <label for="keywords" class="form-label">Select Tone</label>
-                                        <select class="nice-select w-100" style="opacity: 0; width: 0px; padding: 0px; height: 0px;">
-                                            <option value="danish">Funny</option>
-                                            <option value="dutch">Serious</option>
-                                            <option value="douch">Formal</option>
-                                            <option value="bangla">Respectful </option>
+
+                                    <!-- description -->
+                                    <div class="col-12">                                                                 <!-- description  -->
+                                        <div class="form-group">
+                                            <label for="description" class="form-label">Describe your post</label>
+                                            <textarea class="form-control custom-input" id="description" required autocomplete="off"
+                                                placeholder="Describe our post"></textarea>
+                                            <div class="valid-feedback">
+                                                Awesome! You're one step closer to greatness.
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter your description
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                     <!-- select tone  -->
+                                    <div class="col-12">
+                                        <div class="form-group">
+                                            <label for="keywords" class="form-label">Select Tone</label>
+                                            <select class="nice-select w-100" style="opacity: 0; width: 0px; padding: 0px; height: 0px;">
+                                                <option value="danish">Funny</option>
+                                                <option value="dutch">Serious</option>
+                                                <option value="douch">Formal</option>
+                                                <option value="bangla">Respectful </option>
+                                            </select>
+                                            <div class="valid-feedback">
+                                                Awesome! You're one step closer to greatness.
+                                            </div>
+                                            <div class="invalid-feedback">
+                                                Please enter keywords
+                                            </div>
+                                        </div>
+                                    </div> 
+
+                                    <!-- upload box  -->
+                                   <div class="col-12">
+                                        <div class="upload-group">
+                        
+                                            <span class="upoload-label">Upload Image </span>
+                                            <input type="file" name="" id="uploadImage" hidden>
+                        
+                                            <label for="uploadImage" class="upload-box">
+                                                <i class="fa fa-picture-o" aria-hidden="true"></i>
+                                                <span>Upload an image to specify and elaborate your post details.
+                                                    SVG,PNG,JPG or GIF</span>
+
+                                                 <span class="browse">Browse</span>   
+                                            </label>
+                        
+                                        </div>
+                                   </div>
+
+                                     <!-- select platform   -->
+                                   <div class="col-lg-6">
+ 
+                                      <div class="form-group">
+                                        <label for="date" class="form-label">Select Platform</label>
+                                        <select name="" id="" class="form-control custom-input">
+                                            <option value="facebook">Facebook</option>
+                                            <option value="instagram">Instagram</option>
+                                            <option value="linkdin">Linkedin</option>
+                                            <option value="twitter">Twitter</option>
                                         </select>
-                                        <div class="valid-feedback">
-                                            Awesome! You're one step closer to greatness.
-                                        </div>
-                                        <div class="invalid-feedback">
-                                            Please enter keywords
-                                        </div>
                                     </div>
+                                   </div> 
 
-                                    <div class="upload-group">
-
-                                        <span class="upoload-label">Upload Image </span>
-                                        <input type="file" name="" id="uploadImage" hidden>
-                                        
-                                        <label for="uploadImage" class="upload-box">
-                                            <i class="fa fa-picture-o" aria-hidden="true"></i>
-                                            <span>Upload an image to specify and elaborate your post details.
-                                                SVG,PNG,JPG or GIF</span>
-
+                                   <!-- select date  -->
+                                   <div class="col-lg-6">
+                                        <div class="form-group">
+                                            <label for="date" class="form-label">Created Date</label>
+                                            <input type="date" id="date" class="form-control custom-input">
                                         </div>
-                                    </div>
+                                   </div>
 
-                                    <!-- plateform and date  -->
-                                    <div class="row">
-                                
-                                        <div class="col-6">
-                                
-                                            <!-- select platform   -->
-                                            <div class="form-group">
-                                                <label for="date" class="form-label">Select Platform</label>
-                                                <select name="" id="" class="form-control custom-input">
-                                                    <option value="facebook">Facebook</option>
-                                                    <option value="instagram">Instagram</option>
-                                                    <option value="linkdin">Linkedin</option>
-                                                    <option value="twitter">Twitter</option>
-                                                </select>
-                                            </div>
-                                        </div>
-                                
-                                        <div class="col-6">
-                                
-                                            <!-- select platform   -->
-                                            <div class="form-group">
-                                                <label for="date" class="form-label">Created Date</label>
-                                                <input type="date" id="date" class="form-control custom-input">
-                                            </div>
-                                        </div>
-                                
-                                    </div>
-                                
                                 </div>
+                            </div>
 
 
-                                <!-- button -->
-                                <div class="generate-btn-wrapper">
-                                    <button class="generate-btn">Generate post</button>
-                                </div>
-                            </form>
-
+                            <div class="generate-btn-wrapper">
+                                <button class="generate-btn">Generate post</button>
+                            </div>
+                         
+                            
+                        </form>
                     </div>
-                   
+                
 
+                   
                 </div>
-                <div class="col-lg-7 border-start">
+
+                <!-- editor column -->
+                <div class="col-lg-7 border-start mt-0">
                     <div class="title-box ">
                         <input type="text" placeholder="Title">
                     </div>
                     <div id="summernote">
                         <!-- default value -->
-
                     </div>
 
                 </div>
+
             </div>
 
             <!-- coutn -->
