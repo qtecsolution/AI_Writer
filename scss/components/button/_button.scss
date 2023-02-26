@@ -172,3 +172,44 @@
 
   }
 }
+
+
+// landign page 
+
+.primarybtn-landing {
+
+  background: $linear-main;
+  padding: size(10) size(20);
+  @include radius(24);
+  color: $white;
+  @include transitionsall;
+  transition: all .5s ease-in-out;
+  border: none;
+
+  @include hover {
+    color: $white;
+  transition: all .5s ease-in-out;
+
+     background: linear-gradient(135deg, darken(hsl(228, 100%, 80%), 0%) 0%, darken(hsl(224, 79%, 33%), 100%) 95%);
+      
+
+  }
+}
+
+.section-btn {
+  background-color: rgba(44, 76, 172, 0.05);
+   padding: size(10) size(25);
+   @include radius(100);
+   border: none;
+  
+   transition: all 0.5s ease-out;
+   background-size: 200% auto;
+   background-position: 0 50%;
+   .text {
+    background-image: $linear-main;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    @include font($primaryFont,14,medium,normal,20);
+   }
+}
