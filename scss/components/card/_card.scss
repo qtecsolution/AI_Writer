@@ -53,10 +53,12 @@
     @include flex-column;
     gap: size(10);
     flex-grow: 1;
+    @include transitionsall;
     @include breakpoint(mobile576) {
     padding: size(30);
 
     }
+
     @include breakpoint(tab992) {
         flex-grow: 0;
     }
@@ -121,9 +123,15 @@
                 }
                 i {
                     color: $white;
+                    
                 }
             }
         }
+    }
+
+    @include hover {
+        border-color: $main;
+        transform: translateY(-4px);
     }
 
 
