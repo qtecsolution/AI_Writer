@@ -52,7 +52,7 @@
     @include border(solid,1,$gray-200);
     border-left: 0;
     border-right: 0;
-    padding: size(14);
+    padding: size(202) size(14);
     position: relative;
     .search-icon {
         position:absolute;
@@ -244,8 +244,12 @@
 }
 
 .searchbox {
-    padding: 5px;
+    padding: size(10);
     white-space: nowrap;
+    input {
+        font-size: size(14);
+
+    }
 }
 
 .input {

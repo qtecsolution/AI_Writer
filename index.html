@@ -26,22 +26,41 @@
     <!-- SIDEBAR MENU START -->
     <aside class="sidebar">
         <div class="sidebar-header">
-            <h3 class="logo-name text-center">type.ez</h3>
+            <a href="index.html"><h3 class="logo-name text-center">type.ez</h3></a>
         </div>
         <div class="sidebar-body">
-            <a href="create-post.html" class="add-btn" 
-                data-bs-placement="top">+</a>
-            <a href="index.html" class="home-btn active">
-                <span>
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path
-                            d="M2.5 7.50008L10 1.66675L17.5 7.50008V16.6667C17.5 17.1088 17.3244 17.5327 17.0118 17.8453C16.6993 18.1578 16.2754 18.3334 15.8333 18.3334H4.16667C3.72464 18.3334 3.30072 18.1578 2.98816 17.8453C2.67559 17.5327 2.5 17.1088 2.5 16.6667V7.50008Z"
-                            stroke="#D0D5DD" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
-                        <path d="M7.5 18.3333V10H12.5V18.3333" stroke="#D0D5DD" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" />
-                    </svg>
-                </span>
-            </a>
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item">
+                    <a href="create-post.html" class="add-btn" data-bs-toggle="tooltip" data-bs-title="generate your content "
+                    data-bs-placement="right" >+</a>
+                </li>
+                <li>
+                    <a href="index.html" class="sidebar-menu-link" data-bs-toggle="tooltip" data-bs-title="Dashboard"
+                    data-bs-placement="right" ><img src="assets/icons/home.svg" alt="home icon "></a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-menu-link" data-bs-toggle="tooltip" data-bs-title="User Management "
+                    data-bs-placement="right" ><img src="assets/icons/users.svg" alt="user icon "></a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-menu-link" data-bs-toggle="tooltip" data-bs-title="Manage Plane "
+                    data-bs-placement="right" ><img src="assets/icons/zap.svg" alt=" icon "></a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-menu-link" data-bs-toggle="tooltip" data-bs-title="Tooltip here "
+                    data-bs-placement="right" ><img src="assets/icons/layers.svg" alt="layers icon "></a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-menu-link" data-bs-toggle="tooltip" data-bs-title="Purchase plane "
+                    data-bs-placement="right" ><img src="assets/icons/credit-card.svg" alt="credit card  icon "></a>
+                </li>
+                <li>
+                    <a href="create-post.html" class="sidebar-menu-link" data-bs-toggle="tooltip" data-bs-title="SEO"
+                    data-bs-placement="right" ><img src="assets/icons/SEO.svg" alt="  seo icon  "></a>
+                </li>
+            </ul>
+         
+            
         </div>
     </aside>
     <!-- SIDEBAR MENU END -->
@@ -50,21 +69,13 @@
     <main class="mainsection">
         <!-- HEADER SECTION START -->
         <header class="header">
+            <!-- hamburger icon  -->
+            <button class="btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><img src="assets/icons/menu.svg" alt=""></button>
             <!-- MOBILE-LOGO -->
             <h3 class="logo-name d-lg-none ">type.ez</h3>
             <!-- ICON-MENU START -->
             <nav class="header-nav">
                 <ul class="headermenu">
-                    <!-- language  -->
-                    <li class="headermenu-item ">
-                        <select name="" id="" class="nice-select"
-                            style="opacity: 0; width: 0px; padding: 0px; height: 0px;">
-                            <option value="danish">DA</option>
-                            <option value="dutch">NL</option>
-                            <option value="douch">EN</option>
-                            <option value="bangla">Bn</option>
-                        </select>
-                    </li>
                     <!-- USER-DROPDOWN -->
                     <li class="headermenu-item">
                         <div class="user-info">
@@ -94,6 +105,7 @@
                     </li>
                 </ul>
             </nav>
+
         </header>
         <div class="main-content p-2 p-md-4 pt-0">
             <!-- WELCOME SECTION START -->
@@ -198,7 +210,7 @@
                             <span class="search-icon">
                                 <i class="fa fa-search" aria-hidden="true"></i>
                             </span>
-                            <input type="text" name="" id="searchINputField">
+                            <input type="text" name="" id="searchINputField" placeholder="Search post Here">
 
                             <div class="right-text">
                                 <span>Delete</span>
@@ -251,13 +263,9 @@
                                     <td>January 13, 2023 , 11:07 am </td>
                                     <td>
                                         <div class="action-wrapper">
-                                            <span type="button" class="" data-bs-toggle="modal" data-bs-target="#deleteModal">
-                                                <i  class="fa fa-trash-o fa-lg"
-                                                aria-hidden="true"></i>
-                                            </span>
+                                            <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
                                       
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
                                     </td>
@@ -294,12 +302,10 @@
                                     <td>January 13, 2023 , 11:07 am </td>
                                     <td>
                                         <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
+                                      
+                                            <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
-
                                     </td>
                                 </tr>
 
@@ -330,10 +336,9 @@
                                     <td>January 13, 2023 , 11:07 am </td>
                                     <td>
                                         <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
+                                      
+                                            <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
                                     </td>
@@ -366,10 +371,9 @@
                                     <td>January 13, 2023 , 11:07 am </td>
                                     <td>
                                         <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
+                                      
+                                            <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
                                     </td>
@@ -402,10 +406,9 @@
                                     <td>January 13, 2023 , 11:07 am </td>
                                     <td>
                                         <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
+                                      
+                                            <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
                                     </td>
@@ -438,15 +441,13 @@
                                     <td>January 13, 2023 , 11:07 am </td>
                                     <td>
                                         <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
+                                      
+                                            <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td>
                                          <input type="checkbox" name="row-check"  class="form-check-input">
@@ -474,15 +475,13 @@
                                     <td>January 13, 2023 , 11:07 am </td>
                                     <td>
                                         <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
+                                      
+                                            <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td>
                                          <input type="checkbox" name="row-check"  class="form-check-input">
@@ -510,15 +509,13 @@
                                     <td>January 13, 2023 , 11:07 am </td>
                                     <td>
                                         <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
+                                      
+                                            <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
                                     </td>
                                 </tr>
-
                                 <tr>
                                     <td>
                                          <input type="checkbox" name="row-check"  class="form-check-input">
@@ -546,159 +543,16 @@
                                     <td>January 13, 2023 , 11:07 am </td>
                                     <td>
                                         <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
+                                            <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
+                                      
+                                            <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
                                     </td>
                                 </tr>
 
-                                <tr>
-                                    <td>
-                                         <input type="checkbox" name="row-check"  class="form-check-input">
-                                    </td>
-                                    <td>How Technology is Revolutionizing Marketing Strategies</td>
-                                    <td>
 
-                                        <figure class="porject-thumb">
-                                            <img src="assets/images/user.png" alt="">
-                                        </figure>
-
-                                    </td>
-                                    <td>
-                                        <div class="social-wrapper">
-                                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                                            <span>facebook</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        3421
-                                    </td>
-                                    <td>342412121</td>
-                                    <td> <span class="status-posted">posted</span> </td>
-                                    <td>January 13, 2023 , 11:07 am </td>
-                                    <td>
-                                        <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                        </div>
-
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                         <input type="checkbox" name="row-check"  class="form-check-input">
-                                    </td>
-                                    <td>How Technology is Revolutionizing Marketing Strategies</td>
-                                    <td>
-
-                                        <figure class="porject-thumb">
-                                            <img src="assets/images/user.png" alt="">
-                                        </figure>
-
-                                    </td>
-                                    <td>
-                                        <div class="social-wrapper">
-                                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                                            <span>facebook</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        3421
-                                    </td>
-                                    <td>342412121</td>
-                                    <td> <span class="status-posted">posted</span> </td>
-                                    <td>January 13, 2023 , 11:07 am </td>
-                                    <td>
-                                        <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                        </div>
-
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" name="row-check"  class="form-check-input">
-                                    </td>
-                                    <td>How Technology is Revolutionizing Marketing Strategies</td>
-                                    <td>
-
-                                        <figure class="porject-thumb">
-                                            <img src="assets/images/user.png" alt="">
-                                        </figure>
-
-                                    </td>
-                                    <td>
-                                        <div class="social-wrapper">
-                                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                                            <span>facebook</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        3421
-                                    </td>
-                                    <td>342412121</td>
-                                    <td> <span class="status-posted">posted</span> </td>
-                                    <td>february 13, 2023 , 11:07 am </td>
-                                    <td>
-                                        <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                        </div>
-
-                                    </td>
-                                </tr>
-
-                                <tr>
-                                    <td>
-                                        <input type="checkbox" name="row-check"  class="form-check-input">
-                                    </td>
-                                    <td>How Technology is Revolutionizing Marketing Strategies</td>
-                                    <td>
-
-                                        <figure class="porject-thumb">
-                                            <img src="assets/images/user.png" alt="">
-                                        </figure>
-
-                                    </td>
-                                    <td>
-                                        <div class="social-wrapper">
-                                            <i class="fa fa-facebook" aria-hidden="true"></i>
-                                            <span>facebook</span>
-                                        </div>
-
-                                    </td>
-                                    <td>
-                                        3421
-                                    </td>
-                                    <td>342412121</td>
-                                    <td> <span class="status-posted">posted</span> </td>
-                                    <td>January 13, 2023 , 11:07 am </td>
-                                    <td>
-                                        <div class="action-wrapper">
-                                            <a href="javascript:void(0)"><i class="fa fa-trash-o fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                            <a href="edit-post.html"><i class="fa fa-pencil fa-lg"
-                                                    aria-hidden="true"></i></a>
-                                        </div>
-
-                                    </td>
-                                </tr>
-
+                             
 
 
                             </tbody>
@@ -716,12 +570,28 @@
     <!-- MAIN SECTION END -->
 
 
+    <!-- MOBILE OFFCANVAS MENU  -->
+    <div class="offcanvas offcanvas-start"  tabindex="-1" id="mobileMenu" aria-labelledby="staticBackdropLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <div>
+            I will not close if you click outside of me.
+          </div>
+        </div>
+      </div>
+
+
 
 
     <!-- MOBILE FIXED BUTTON -->
     <a class="add-btn mobile-fixed" href="create-post.html">+</a>
     <!-- BOOTSTRAP JS   -->
     <script src="	https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- BOOTSTRAP TOOLTIP  -->
+    <script src="assets/js/tooltip/tooltip.js"></script>
 
     <!--NICE SELECT 2  JS-->
     <script src="assets/js/niceselect2/nice-select2.min.js"></script>

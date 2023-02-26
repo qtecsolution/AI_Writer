@@ -46,4 +46,88 @@
 
 
 
+.pricing-card {
+    @include border(solid,1,$gray-300);
+    @include radius(16);
+    padding: size(14);
+    @include flex-column;
+    gap: size(10);
+    flex-grow: 1;
+    @include breakpoint(mobile576) {
+    padding: size(30);
+
+    }
+    @include breakpoint(tab992) {
+        flex-grow: 0;
+    }
+
+    &-header {
+        @include border-single(bottom,solid,1,$gray-300);
+        @include flex-column;
+        align-items: center;
+        padding-bottom: size(20);
+        gap: size(10);
+       
+
+        .price {
+            color: $gray-900;
+            @include font($primaryFont,34,semibold,normal,60);
+            @include flex;
+            align-items: center;
+            .currency,
+            .plane-time {
+                font-size: size(20)
+            }
+        }
+        .name {
+            color: $gray-900;
+            @include font($primaryFont,20,semibold,normal,30);
+
+        }
+        .info {
+            color: $main;
+        }
+    }
+
+    &-body {
+        
+        .facility-list {
+            @include list-vertical;
+            gap: size(10);
+            padding-block: size(20);
+            @include breakpoint(mobile576) {
+                gap: size(16);
+            }
+            li {
+                @include flex;
+                gap: size(8);
+                align-items: center;
+                color: $gray-500;
+                font-size: size(12);
+                @include breakpoint(mobile576) {
+                font-size: size(14);
+
+                }
+            }
+            .icon-wrapper {
+                @include square(24);
+                @include circle;
+                background: $main;
+                @include flex-center;
+                padding: size(6);
+
+                &.cross-icon {
+                    background:$danger ;
+                }
+                i {
+                    color: $white;
+                }
+            }
+        }
+    }
+
+
+}
+
+
 

@@ -55,9 +55,13 @@
             overflow-x: auto;
             @include hideScrollbar;
             padding: size(30) size(0);
+            
 
             .template-card {
                flex-grow: 1;
+            }
+            @include breakpoint(mobile768) {
+                flex-wrap: wrap;
             }
 
         }
@@ -74,7 +78,7 @@
     
     
     &-header {
-        @include border-single(bottom,solid,1,$gray-300); 
+       
         padding-bottom: size(12); 
         .header-title {
             color: $gray-800; 
@@ -86,6 +90,38 @@
         
     }
 }
+
+.pricing {
+    @include flex-column;
+    gap: size(16);
+    padding-top: size(20);
+    &-header {
+        @include border-single(bottom,solid,1,$gray-300); 
+        padding-bottom: size(20);
+        @include flex-column;
+        gap: size(10);
+        .header-title {
+            color: $gray-800; 
+            @include font($primaryFont,16,bold,normal,24);
+        }
+        .des {
+            color: $gray-500;
+            font-size: size(14);
+        }
+    }
+
+    &-body {
+        .pricing-cards {
+            @include flex;
+             gap: size(20);
+            flex-wrap: wrap;
+         }
+    }
+    
+
+
+}
+
 
 
 

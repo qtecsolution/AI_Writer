@@ -26,6 +26,11 @@
       align-items: center;
       gap: size(40);
     }
+    &-menu {
+      @include list-vertical;
+      gap: size(40);
+      align-items: center;
+    }
   
     // &-header {
     //   padding: size(17.5) size(24);
