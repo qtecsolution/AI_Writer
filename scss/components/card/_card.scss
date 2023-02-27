@@ -246,9 +246,10 @@
 
 
 .card-divider {
-    border-top: 2px solid transparent;
-    border-image: linear-gradient(to right, #3a519b, #97abff 30%, #97abff 70%, #123597) 1;
-    opacity: 0.5;
+    // border-top: 2px solid transparent;
+    // border-image: linear-gradient(to right, #3a519b, #97abff 30%, #97abff 70%, #123597) 1;
+    // opacity: 0.5;
+    border-top: 2px solid rgba(44, 76, 172, 0.3)
 } 
 
 .step {
@@ -275,4 +276,18 @@
             color: $gray-800;
         }
     }
+}
+
+.getstarted-box {
+  @include flex; 
+  align-items: center;
+  gap: size(24); 
+  
+  .long-check-wrapper {
+    @include square(58);
+    background: $gray-100;
+    @include circle;
+    @include flex-center;
+   
+  }
 }
