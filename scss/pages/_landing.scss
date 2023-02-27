@@ -129,3 +129,19 @@
  
 
 }
+
+.steps-wrapper {
+    @include flex;
+    flex-wrap: wrap;
+    gap: size(40);
+    justify-content: center;
+    padding: size(100) size(0);
+
+
+    @include breakpoint(tab992) {
+        .step {
+       
+            width: 40%;
+         }
+    }
+}
