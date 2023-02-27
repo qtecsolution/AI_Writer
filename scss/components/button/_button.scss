@@ -222,5 +222,10 @@
   color: $main;
   @include radius(40);
   @include font($primaryFont,12,medium,normal,18);
+  @include transitionsall;
+  @include hover {
+    background: darken(rgba(44, 76, 172, 0.09),20%);
+    
+  }
 
 }

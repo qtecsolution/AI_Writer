@@ -1,0 +1,53 @@
+@use '../../global'as *;
+@use '../../partials'as *;
+
+
+
+.setting-tab {
+    @include flex;
+    flex-wrap: wrap;
+    border-radius: size(6);
+    overflow: hidden;
+    .nav-item {
+        flex-grow: 1;
+
+        &:first-child {
+            @include single-radius(top,left,6);
+                @include single-radius(bottom,left,6);
+                overflow: hidden;
+            .nav-link {
+                @include single-radius(top,left,6);
+                @include single-radius(bottom,left,6);
+            }
+        }
+        &:last-child {
+            @include single-radius(top,right,6);
+            @include single-radius(bottom,right,6);
+            border-right: 0;
+
+            .nav-link {
+                @include single-radius(top,right,6);
+            @include single-radius(bottom,right,6);
+            border-right: 0;
+            }
+        }
+   
+    }
+    .nav-link {
+        padding: size(10) size(0);
+        
+        @include setBgColor($gray-100,$gray-700);
+        color: $gray-800;
+        @include font($primaryFont,12,normal,normal,22);
+        @include transitionsall;
+        display: block;
+        width: 100%;
+        border-radius: 0;
+
+        &.active { 
+            background: $linear-main;
+            color: $white;
+        }
+    }
+}
+
