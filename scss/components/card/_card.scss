@@ -2,7 +2,7 @@
 @use '../../partials'as *;
 
 .template-card {
-    @include border(solid,1,$gray-300);
+    @include border(solid, 1, $gray-300);
     padding: size(16);
     @include radius(10);
     @include flex-column;
@@ -11,10 +11,11 @@
     // min-width: size(180); 
     min-width: size(170);
     max-width: size(290);
+
     @include breakpoint(tab992) {
         padding: size(20);
     }
- 
+
     .card-img {
         @include square(30);
         overflow: hidden;
@@ -29,33 +30,34 @@
 
     .card-title {
         color: $gray-800;
-        @include font($primaryFont,14,bold,normal,20);
+        @include font($primaryFont, 14, bold, normal, 20);
     }
 
     .card-des {
         color: $gray-600;
-        @include font($primaryFont,14,normal,normal,18);
+        @include font($primaryFont, 14, normal, normal, 18);
     }
 
     @include hover {
-        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; 
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     }
 
-  
+
 }
 
 
 
 .pricing-card {
-    @include border(solid,1,$gray-300);
+    @include border(solid, 1, $gray-300);
     @include radius(16);
     padding: size(14);
     @include flex-column;
     gap: size(10);
     flex-grow: 1;
     @include transitionsall;
+
     @include breakpoint(mobile576) {
-    padding: size(30);
+        padding: size(30);
 
     }
 
@@ -64,53 +66,60 @@
     }
 
     &-header {
-        @include border-single(bottom,solid,1,$gray-300);
+        @include border-single(bottom, solid, 1, $gray-300);
         @include flex-column;
         align-items: center;
         padding-bottom: size(20);
         gap: size(10);
-       
+
 
         .price {
             color: $gray-900;
-            @include font($primaryFont,34,semibold,normal,60);
+            @include font($primaryFont, 34, semibold, normal, 60);
             @include flex;
             align-items: center;
+
             .currency,
             .plane-time {
                 font-size: size(20)
             }
         }
+
         .name {
             color: $gray-900;
-            @include font($primaryFont,20,semibold,normal,30);
+            @include font($primaryFont, 20, semibold, normal, 30);
 
         }
+
         .info {
             color: $main;
         }
     }
 
     &-body {
-        
+
         .facility-list {
             @include list-vertical;
             gap: size(10);
             padding-block: size(20);
+
             @include breakpoint(mobile576) {
                 gap: size(16);
             }
+
             li {
                 @include flex;
                 gap: size(8);
                 align-items: center;
                 color: $gray-500;
                 font-size: size(12);
+
                 @include breakpoint(mobile576) {
-                font-size: size(14);
+                    font-size: size(14);
 
                 }
             }
+
             .icon-wrapper {
                 @include square(24);
                 @include circle;
@@ -119,11 +128,12 @@
                 padding: size(6);
 
                 &.cross-icon {
-                    background:$danger ;
+                    background: $danger;
                 }
+
                 i {
                     color: $white;
-                    
+
                 }
             }
         }
@@ -137,5 +147,107 @@
 
 }
 
+.benifits-card {
+    background: linear-gradient(135deg, rgba(151, 171, 255, 0.1) 0%, rgba(18, 53, 151, 0.1) 100%);
+    @include radius(30);
+    @include border(solid, 2, $white);
+    padding: size(24);
+    color: $gray-800;
+    @include flex;
+    gap: size(16);
+    @include transitionsall;
+    transition-duration: .5s !important;
+
+    @include breakpoint(mobile576) {
+        gap: size(24);
+    }
 
 
+    .left {
+        .card-icon-wrapper {
+            @include square(58);
+            background: $white;
+            @include circle;
+            @include flex-center;
+        }
+    }
+
+    .right {
+        @include flex-column;
+        gap: size(12);
+
+        .title {
+            color: $gray-800;
+            @include font($primaryFont, 16, medium, normal, 22);
+
+            @include breakpoint(mobile576) {
+                @include font($primaryFont, 18, medium, normal, 22);
+
+            }
+        }
+
+        .text {
+            color: $gray-800;
+            @include font($primaryFont, 10, normal, normal, 18);
+
+            @include breakpoint(mobile576) {
+                @include font($primaryFont, 12, normal, normal, 19);
+
+            }
+        }
+
+        .card-link {
+            @include flex;
+            gap: size(12);
+            @include transitionsall;
+
+            span {
+                color: $main;
+                @include font($primaryFont, 10, medium, normal, 16);
+
+                @include breakpoint(mobile576) {
+                    @include font($primaryFont, 12, medium, normal, 18);
+
+                }
+            }
+            @include hover {
+                gap: size(16);
+                text-decoration: underline;
+            }
+        }
+    }
+
+    @include hover {
+        transform: translateY(size(-8)) !important;
+        
+    }
+}
+
+.benifit-col {
+    @include flex-column;
+    align-items: center;
+    text-align: center;
+    gap: size(16);
+    @include transitiontransform;
+    padding: size(10);
+
+    .title {
+        color: $main;
+        @include font($primaryFont, 18, semibold, normal, 22);
+    }
+    .content {
+        color:$gray-800 ;
+        @include font($primaryFont, 14, normal, normal, 20);
+    }
+
+    @include hover {
+        transform: translateY(-4px);
+    }
+}
+
+
+.card-divider {
+    border-top: 2px solid transparent;
+    border-image: linear-gradient(to right, #3a519b, #97abff 30%, #97abff 70%, #123597) 1;
+    opacity: 0.5;
+}
