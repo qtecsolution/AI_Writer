@@ -42,10 +42,10 @@
                     <a href="index.html"><h3 class="logo-name text-center header-logo">type.ez</h3></a>
                     <ul class="desk-menu">
                         <li>
-                            <a href="#works" class="desk-menu-link">How To Works</a>
+                            <a href="#usecase" class="desk-menu-link">Use Cases</a>
                         </li>
                         <li>
-                            <a href="#usecase" class="desk-menu-link">Use Cases</a>
+                            <a href="#works" class="desk-menu-link">How To Works</a>
                         </li>
                         <li>
                             <a href="#pricing" class="desk-menu-link">Pricing</a>
@@ -56,8 +56,8 @@
     
                  <div class="header-right">
                     <ul class="desk-menu">
-                        <li><a href="#" class="desk-menu-link">Login</a></li>
-                        <li><a href="#" class="primarybtn-landing ">Get started ___ it’s free</a></li>
+                        <li><a href="login.html" class="desk-menu-link">Login</a></li>
+                        <li><a href="login.html" class="primarybtn-landing ">Get started ___ it’s free</a></li>
                     </ul>
                  </div>
             </div>
@@ -67,14 +67,14 @@
             <div class="moble-header d-flex justify-content-between d-lg-none ">
                 <a href="index.html"><h3 class="logo-name text-center header-logo">type.ez</h3></a>
 
-                <div id="nav-icon2">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </div>
+                <span data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"> 
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu">
+                        <line x1="3" y1="12" x2="21" y2="12" />
+                        <line x1="3" y1="6" x2="21" y2="6" />
+                        <line x1="3" y1="18" x2="21" y2="18" />
+                    </svg>
+                </span>
             </div>
 
 
@@ -892,7 +892,7 @@
 
     <footer class="landing-footer">
         <div class="container">
-            <div class="footer-content">
+            <div class="footer-content" data-aos="fade-up"  data-aos-duration="1000" >
                 <div class="row g-4">
                     <div class="col-lg-2">
                         <a href="index.html"><h3 class="logo-name ">type.ez</h3></a>
@@ -968,6 +968,44 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- MOBILE-MENU -->
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="mobileMenu">
+        <div class="offcanvas-header">
+            <a href="index.html"><h3 class="logo-name text-center header-logo">type.ez</h3></a>
+
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M13.2849 15.5425L7.62804 9.88562L1.97118 15.5425L0.0855651 13.6569L5.74242 8L0.0855651 
+                    2.34315L1.97118 0.457528L7.62804 6.11438L13.2849 0.457527L15.1705 2.34315L9.51366 8L15.1705 13.6569L13.2849 
+                    15.5425Z" fill="#718096"/>
+                </svg>
+                    
+            </button>
+        </div>
+
+    <div class="offcanvas-body">
+        <ul class="mobilelist">
+            <li class="mobilelist-item" data-bs-dismiss="offcanvas">
+                <a href="#usecase" class="mobilelist-link">Use Cases</a>
+            </li>
+            <li class="mobilelist-item" data-bs-dismiss="offcanvas">
+                <a href="#works" class="mobilelist-link">How To Works</a>
+            </li>
+            <li class="mobilelist-item" data-bs-dismiss="offcanvas">
+                <a href="#pricing" class="mobilelist-link">Pricing</a>
+            </li>
+            <li class="mobilelist-item" data-bs-dismiss="offcanvas">
+                <a href="login.html" class="mobilelist-link">Login</a>
+            </li>
+           
+            
+        </ul>
+
+     
+    </div>
+    </div>
 
 
 
