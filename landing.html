@@ -34,7 +34,7 @@
                             <a href="#usecase" class="desk-menu-link">Use Cases</a>
                         </li>
                         <li>
-                            <a href="#works" class="desk-menu-link">How To Works</a>
+                            <a href="#works" class="desk-menu-link">How it Works </a>
                         </li>
                         <li>
                             <a href="#pricing" class="desk-menu-link">Pricing</a>
@@ -1030,7 +1030,7 @@
                     <a href="#usecase" class="mobilelist-link">Use Cases</a>
                 </li>
                 <li class="mobilelist-item" data-bs-dismiss="offcanvas">
-                    <a href="#works" class="mobilelist-link">How To Works</a>
+                    <a href="#works" class="mobilelist-link">How it Works </a>
                 </li>
                 <li class="mobilelist-item" data-bs-dismiss="offcanvas">
                     <a href="#pricing" class="mobilelist-link">Pricing</a>
@@ -1048,20 +1048,6 @@
 
 
 
-    <script>
-        var className = "inverted";
-        var scrollTrigger = 80;
-
-        window.onscroll = function () {
-            // We add pageYOffset for compatibility with IE.
-            if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
-                document.getElementsByTagName("header")[0].classList.add('bg-white');
-            } else {
-                document.getElementsByTagName("header")[0].classList.remove('bg-white');
-            }
-        };
-
-    </script>
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <!-- Swiper JS -->
@@ -1070,6 +1056,7 @@
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
         crossorigin="anonymous"></script>
     <script>
+        // animation on scroll 
         AOS.init({
             offset: 120, // offset (in px) from the original trigger point
             delay: 0, // values from 0 to 3000, with step 50ms
@@ -1095,6 +1082,18 @@
         });
 
        
+
+        // header background add when scroll start 
+        var scrollTrigger = 80;
+
+        window.onscroll = function () {
+            // We add pageYOffset for compatibility with IE.
+            if (window.scrollY >= scrollTrigger || window.pageYOffset >= scrollTrigger) {
+                document.getElementsByTagName("header")[0].classList.add('bg-white');
+            } else {
+                document.getElementsByTagName("header")[0].classList.remove('bg-white');
+            }
+        };
     </script>
 </body>
 
