@@ -1,6 +1,14 @@
 @use '../global' as *;
 @use '../partials' as *;
 
+.body-landig {
+    background-image: url('./assets/images/landing/landing-bg.svg');
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    width: 97%;
+}
+
 .hero-content {
    @include flex-column;
    align-items: center;
