@@ -56,16 +56,7 @@
             <!-- ICON-MENU START -->
             <nav class="header-nav">
                 <ul class="headermenu">
-                    <!-- language  -->
-                    <li class="headermenu-item ">
-                        <select name="" id="" class="nice-select"
-                            style="opacity: 0; width: 0px; padding: 0px; height: 0px;">
-                            <option value="danish">DA</option>
-                            <option value="dutch">NL</option>
-                            <option value="douch">EN</option>
-                            <option value="bangla">Bn</option>
-                        </select>
-                    </li>
+                    
                     <!-- USER-DROPDOWN -->
                     <li class="headermenu-item">
                         <div class="user-info">
@@ -239,33 +230,34 @@
                     <div id="summernote">
                         <!-- default value -->
                     </div>
+                     <!-- coutn -->
+                    <div class="count sticky-bottom">
+                        <div class="left">
+                            <span class="words">341 Words</span>
+                            <span class="charecters">34851574 Characters</span>
+                        </div>
+
+                        <div class="right">
+                            <button>
+                                <i class="fa fa-random" aria-hidden="true"></i>
+                                <span>Regenerate</span>
+                            </button>
+                            <button>
+                                <i class="fa fa-copy"></i>
+                                <span>copy</span>
+                            </button>
+                            <button>
+                                <i class="fa fa-save"></i>
+                                <span>save</span>
+                            </button>
+                        </div>
+                    </div>
 
                 </div>
 
             </div>
 
-            <!-- coutn -->
-            <div class="count sticky-bottom">
-                <div class="left">
-                    <span class="words">341 Words</span>
-                    <span class="charecters">34851574 Characters</span>
-                </div>
-
-                <div class="right">
-                    <button>
-                        <i class="fa fa-random" aria-hidden="true"></i>
-                        <span>Regenerate</span>
-                    </button>
-                    <button>
-                        <i class="fa fa-copy"></i>
-                        <span>copy</span>
-                    </button>
-                    <button>
-                        <i class="fa fa-save"></i>
-                        <span>save</span>
-                    </button>
-                </div>
-            </div>
+           
         </div>
     </main>
     <!-- MAIN SECTION END -->
@@ -296,12 +288,14 @@
                     ['color', ['forecolor']],
                     ['height', ['height']]
                 ],
+                disableResizeEditor: false,
                 colorNames: {
                     'red': '#ff0000',
                     'green': '#00ff00',
                     'blue': '#0000ff'
                 }
             });
+            $('.note-statusbar').hide(); 
 
             // these code for fixing some style in editor 
             var styleEle = $("style#fixed");
