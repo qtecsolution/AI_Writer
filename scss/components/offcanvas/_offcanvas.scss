@@ -10,6 +10,7 @@
   
     &-header {
       @include border-single(bottom,solid,1,$gray-300);
+      padding-top: size(20);
       .logo {
         width: size(120);
         height: size(30);
