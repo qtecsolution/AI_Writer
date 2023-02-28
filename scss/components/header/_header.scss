@@ -159,6 +159,10 @@
    z-index: 100;
     .header-desk {
         @include flex-between;
+
+        .header-logo {
+            
+        }
     }
     .header-left {
         @include flex;
@@ -177,7 +181,7 @@
             position: relative;
             padding: size(10) ;
             color: $gray-700;
-            @include font($primaryFont,14,medium,normal,24);
+            @include font($primaryFont,16,medium,normal,24);
           
                &::after {
                     position: absolute;

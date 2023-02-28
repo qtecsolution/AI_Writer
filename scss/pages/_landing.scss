@@ -36,17 +36,32 @@
    }
    .hero-des {
     color: $gray-800;
+    @include font($primaryFont,14,normal,normal,22);
+    @include breakpoint(mobile576) {
+        @include font($primaryFont,16,normal,normal,24);
+    }
+   }
+
+   .credit {
+    color: $gray-800;
+    @include font($primaryFont,14,normal,normal,22);
+    @include breakpoint(mobile576) {
+        @include font($primaryFont,16,normal,normal,24);
+    }
    }
 }
 
 .preview-image {
     @include w100;
+    max-height: size(958);
 
     img {
         @include wh100;
-        object-fit: cover;
+        object-fit: contain;
     }
-}
+} 
+
+
 
 .benifits {
     padding: size(30) size(0);
@@ -112,8 +127,19 @@
                     -webkit-text-fill-color: transparent;
                     background-clip: text;
                     text-fill-color: transparent;
-                }
+                } 
+
+                &.logo-color {
+                    background: $linear-main;
+                    -webkit-background-clip: text;
+                    -webkit-text-fill-color: transparent;
+                    background-clip: text;
+                    text-fill-color: transparent;
             }
+            }
+
+
+
         }
 
         .des {
@@ -133,15 +159,27 @@
 .steps-wrapper {
     @include flex;
     flex-wrap: wrap;
-    gap: size(40);
+    gap: size(60);
     justify-content: center;
     padding: size(100) size(0);
 
 
     @include breakpoint(tab992) {
+        gap: size(80);
         .step {
        
             width: 40%;
          }
+    }
+}
+
+
+.works-immage {
+    height: size(370);
+    @include w100;
+
+    img {
+        @include wh100;
+        object-fit: contain;
     }
 }

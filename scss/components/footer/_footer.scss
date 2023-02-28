@@ -3,6 +3,7 @@
 
 .landing-footer {
 
+    padding-bottom: size(100);
     .footer-content {
         background: linear-gradient(135deg, rgba(151, 171, 255, 0.1) 0%, rgba(18, 53, 151, 0.1) 100%);
         @include radius(30);
