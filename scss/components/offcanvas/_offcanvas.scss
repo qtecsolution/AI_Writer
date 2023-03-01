@@ -73,13 +73,9 @@
             @include setBgColor($main,$white);
           }
   
-          
-  
-        
-  
           @include hover {
-            color: $gray-700;
-            background: $gray-100;
+            color: $white;
+            background: $linear-main;
   
           }
         }

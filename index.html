@@ -110,7 +110,7 @@
         <div class="main-content p-2 p-md-4 pt-0">
             <!-- WELCOME SECTION START -->
             <section class="welcome">
-                <div class="row">
+                <div class="row g-0">
                     <div class="col-12 text-center">
                         <h3 class="welcome-title">👋 Hi, Olivia Rhye</h3>
                         <p class="welcome-text">"Welcome Type.ez! We're glad to have you here. Our platform is designed
@@ -573,13 +573,35 @@
     <!-- MOBILE OFFCANVAS MENU  -->
     <div class="offcanvas offcanvas-start"  tabindex="-1" id="mobileMenu" aria-labelledby="staticBackdropLabel">
         <div class="offcanvas-header">
-          <h5 class="offcanvas-title" id="staticBackdropLabel">Offcanvas</h5>
-          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            <a href="index.html">
+                <h3 class="logo-name text-center header-logo">type.ez</h3>
+            </a>
+
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
+                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M20 20L4 4M20 4L4 20" stroke="#121212" stroke-width="2" stroke-linecap="round"></path>
+                </svg>
+
+            </button>
         </div>
+
         <div class="offcanvas-body">
-          <div>
-            I will not close if you click outside of me.
-          </div>
+            <ul class="mobilelist">
+                <li class="mobilelist-item" data-bs-dismiss="offcanvas">
+                    <a href="#usecase" class="mobilelist-link">Use Cases</a>
+                </li>
+                <li class="mobilelist-item" data-bs-dismiss="offcanvas">
+                    <a href="#works" class="mobilelist-link">How it Works </a>
+                </li>
+                <li class="mobilelist-item" data-bs-dismiss="offcanvas">
+                    <a href="#pricing" class="mobilelist-link">Pricing</a>
+                </li>
+                <li class="mobilelist-item" data-bs-dismiss="offcanvas">
+                    <a href="login.html" class="mobilelist-link">Login</a>
+                </li>
+                
+            </ul>
+        </div>
         </div>
       </div>
 

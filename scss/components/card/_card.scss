@@ -209,6 +209,7 @@
 
                 }
             }
+
             @include hover {
                 gap: size(16);
                 text-decoration: underline;
@@ -218,7 +219,7 @@
 
     @include hover {
         transform: translateY(size(-8)) !important;
-        
+
     }
 }
 
@@ -234,8 +235,9 @@
         color: $main;
         @include font($primaryFont, 18, semibold, normal, 22);
     }
+
     .content {
-        color:$gray-800 ;
+        color: $gray-800;
         @include font($primaryFont, 14, normal, normal, 20);
     }
 
@@ -250,11 +252,12 @@
     // border-image: linear-gradient(to right, #3a519b, #97abff 30%, #97abff 70%, #123597) 1;
     // opacity: 0.5;
     border-top: 2px solid rgba(44, 76, 172, 0.1)
-} 
+}
 
 .step {
-    @include flex; 
-    gap:size(20);
+    @include flex;
+    gap: size(20);
+
     .left {
         .count-number {
             @include square(58);
@@ -267,27 +270,103 @@
     .right {
         @include flex-column;
         gap: size(10);
+
         .title {
-            @include font($primaryFont,18,medium,normal,22);
+            @include font($primaryFont, 18, medium, normal, 22);
             color: $gray-800;
         }
+
         .content {
-            @include font($primaryFont,12,normal,normal,18);
+            @include font($primaryFont, 12, normal, normal, 18);
             color: $gray-800;
         }
     }
 }
 
 .getstarted-box {
-  @include flex; 
-  align-items: center;
-  gap: size(24); 
-  
-  .long-check-wrapper {
-    @include square(58);
-    background: $gray-100;
-    @include circle;
-    @include flex-center;
-   
-  }
+    @include flex;
+    align-items: center;
+    gap: size(24);
+
+    .long-check-wrapper {
+        @include square(58);
+        background: $gray-100;
+        @include circle;
+        @include flex-center;
+
+    }
+}
+
+
+.blogcard {
+    background: linear-gradient(135deg, rgba(151, 171, 255, 0.1) 0%, rgba(18, 53, 151, 0.1) 100%);
+    @include radius(30);
+    padding: size(26);
+    @include border(solid, 2, transparent);
+    @include transitionsall;
+    color: $gray-800;
+
+    gap: size(20);
+
+    &-header {
+        .date {
+            color: $gray-500;
+            @include font($primaryFont, 12, normal, normal, 18);
+        }
+
+
+    }
+
+    &-body {
+        padding-top: size(20);
+        @include flex-column;
+        gap: size(12);
+        .title {
+            color: $gray-800;
+            @include font($primaryFont, 16, semibold, normal, 22);
+        }
+
+        .content {
+            color: $gray-800;
+            @include line-clamp-3;
+            @include font($primaryFont, 12, normal, normal, 18);
+        }
+
+    }
+
+    &-footer {
+        padding-top: size(30);
+        .go-btn {
+            @include square(45);
+            background: $white;
+            display: inline-block;
+            @include circle;
+            @include flex-center;
+            transition: background-color 0.3s ease;
+            border: none;
+
+        }
+    }
+
+
+    @include hover {
+
+        border-color: lighten($main, 40%);
+        cursor: pointer;
+
+        .go-btn {
+
+            background: linear-gradient(135deg, #97ABFF 0%, #123597 100%);
+
+            svg {
+                path {
+                    stroke: $white;
+                }
+            }
+
+        }
+
+    }
+
+
 }
