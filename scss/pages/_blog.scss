@@ -13,3 +13,32 @@
         padding-top: size(100);
     }
 }
+
+.blog-pagination {
+    @include flex;
+    gap: size(10);
+        
+    .page-item {
+      
+        .page-link {
+            background: linear-gradient(110.99deg, #97ABFF -6.41%, #123597 106.7%);
+            color: $white;
+            @include radius(25);
+            padding: size(10) size(20); 
+            @include font($primaryFont,16,normal,normal,24);
+            @include hover {
+                background: linear-gradient(135deg, darken(hsl(228, 100%, 80%), 0%) 0%, darken(hsl(224, 79%, 33%), 100%) 95%);
+            }
+            
+        } 
+
+        &.disabled {
+            .page-link {
+             background: #ddd;
+             color: $gray-600;
+               
+            }
+        }
+    }
+    
+}

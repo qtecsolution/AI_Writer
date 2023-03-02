@@ -188,8 +188,7 @@
 
   @include hover {
     color: $white;
-  transition: all .5s ease-in-out;
-
+    transition: all .5s ease-in-out;
      background: linear-gradient(135deg, darken(hsl(228, 100%, 80%), 0%) 0%, darken(hsl(224, 79%, 33%), 100%) 95%);
       
 

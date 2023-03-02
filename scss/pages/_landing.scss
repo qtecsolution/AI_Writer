@@ -191,3 +191,11 @@
         object-fit: contain;
     }
 }
+
+.generate-image {
+    @include w100;
+    img {
+        @include w100;
+        height: auto;
+    }
+}
