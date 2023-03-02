@@ -1,0 +1,15 @@
+
+@use '../global' as *;
+@use '../partials' as *;
+
+.blog-cards {
+    padding-top: size(50);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    
+    @include breakpoint(tab992) {
+        grid-template-columns: 1fr 1fr;
+        padding-top: size(100);
+    }
+}

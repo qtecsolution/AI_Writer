@@ -1,0 +1,64 @@
+@use '../../global' as *;
+@use '../../partials' as *;
+
+.faq {
+    .accordion {
+        @include flex-column;
+        gap: size(10);
+        
+        &-item {
+            border: 1px solid rgba(44, 76, 172, 0.05);
+            overflow: hidden;
+            
+            background: rgba(44, 76, 172, 0.05);
+            @include radius(10);
+            .accordion-button {
+                    
+                background: rgba(44, 76, 172, 0.05);
+                padding: size(10);
+                @include radius(10);
+                box-shadow: none;
+                
+                
+            }
+            &:last-of-type {
+               
+                
+            }
+        }
+        &-header {
+            @include radius(10);
+            
+        }
+
+        &-body {
+            padding: size(14) size(20);
+            @include font($secondaryFont,14,light,normal,24);
+            color: $gray-600;
+
+            .accordion-text {
+                
+                
+            }
+            
+        }
+      
+        &-button {
+            padding: size(18) size(0);
+            @include font($secondaryFont,14,medium,normal,24);
+            color: $gray-700;
+            border: none;
+            &::after {
+                background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M3.75 12H20.25" stroke="%231D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M13.5 5.25L20.25 12L13.5 18.75" stroke="%231D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+            }
+            &:not(.collapsed) {
+                background: transparent;
+                &::after {
+                    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none"><path d="M12 3.75L12 20.25" stroke="%231D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M18.75 13.5L12 20.25L5.25 13.5" stroke="%231D2939" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>') no-repeat center;
+                    
+                }
+            }
+            
+        }
+    }
+}

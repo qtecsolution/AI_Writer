@@ -2,10 +2,13 @@
 @use '../partials' as *;
 
 .body-landing {
-    background-image: url('../../assets/images/landing/landing-bg.svg');
+    background-image: url('../../assets/images/landing/small-bg.svg');
     background-repeat: no-repeat;
     background-position: top center;
-    background-size: cover;
+    background-size: size(1000);
+    @include breakpoint(tab992) {
+        background-size: contain;
+    }
  
     
 }
@@ -156,13 +159,9 @@
         }
 }
 .benifits-cards-wrapper {
-   
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-
- 
-
+    grid-template-columns: repeat(auto-fit, minmax(size(300), 1fr));
+    gap: size(20);
 }
 
 .steps-wrapper {
