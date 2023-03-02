@@ -192,10 +192,27 @@
     }
 }
 
-.generate-image {
+.generate-image1 {
     @include w100;
+    
+    overflow: hidden;
+   
+    
     img {
-        @include w100;
+        @include wh100;
         height: auto;
+        object-fit: contain;
+    }
+}
+.generate-image2 {
+    @include w100;
+   
+    overflow: hidden;
+    
+   
+    img {
+        @include wh100;
+        height: auto;
+        object-fit: contain;
     }
 }
