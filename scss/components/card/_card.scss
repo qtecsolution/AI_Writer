@@ -36,6 +36,8 @@
     .card-des {
         color: $gray-600;
         @include font($primaryFont, 14, normal, normal, 18);
+        @include line-clamp;
+        
     }
 
     @include hover {
