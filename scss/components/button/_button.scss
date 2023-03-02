@@ -92,7 +92,7 @@
   @include radius(14);
   @include flex-center;
   @include border(solid, 5, hsl(234, 100%, 95%));
-  @include font($primaryFont, 16, normal, normal, 24);
+  @include font($primaryFont, 16, medium, normal, 24);
   @include transitionsall;
   padding: size(8);
 
