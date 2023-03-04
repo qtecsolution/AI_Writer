@@ -9,7 +9,13 @@ html {
 
   &:focus-within {
     scroll-behavior: inherit;
-  }
+  } 
+  
+    @media (min-height: 300px) {
+      scroll-padding-top: 70px; // 1
+    }
+  
+  
 }
 
 * {

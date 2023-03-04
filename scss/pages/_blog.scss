@@ -7,11 +7,11 @@
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
-    
     @include breakpoint(tab992) {
         grid-template-columns: 1fr 1fr;
         padding-top: size(100);
     }
+   
 }
 
 .blog-pagination {
@@ -41,4 +41,105 @@
         }
     }
     
+} 
+
+
+.blog-detail {
+    padding: size(100) size(0);
 }
+
+.blogdetail-row {
+    @include flex;
+    justify-content: space-between;
+    gap: size(20);
+  
+
+    .toc {
+        position: sticky;
+        display: none;
+        top: size(72);
+       
+       
+        height: 100vh;
+        @include breakpoint(mobile768) {
+            display: block;
+        }
+
+        .toc-content {
+            border: 12px solid rgba(44, 76, 172, .08);
+            @include radius(15);
+            padding: size(20) size(0);
+            max-width: size(250);
+            @include flex-column; 
+            gap: size(14);
+            padding-left: size(24); 
+            background:$white;
+            .toc-header {
+                color: $gray-500;
+                @include font($primaryFont,14,normal,normal,20);
+            }
+        }
+
+        .toclist , .innerlist {
+            @include list-vertical;
+            gap: size(4); 
+
+            &-item {
+              @include transitionsall;
+                @include hover {
+                    background-color: rgba(71,190,185,.12);
+                }
+                &.active {
+                    background-color: rgba(71,190,185,.12);
+
+                }
+            }
+
+            
+            &-link {
+                color: $gray-500;
+                padding: size(6) size(10);
+                display: block;
+                @include font($primaryFont,14,normal,normal,20);
+            }
+        }
+
+        .innerlist {
+            padding-left: size(20);
+            padding-top: size(12);
+            padding-bottom: size(20);
+        }
+
+    }
+
+    .content {
+        flex: 1;
+         @include radius(15);
+         @include border(solid,1,$gray-300);
+         padding: size(24) size(32);
+         background: $white;
+
+         .date {
+            @include font($primaryFont,14,medium,normal,20);
+            color: $gray-500;
+
+         }
+
+         .blog-title {
+            color: $gray-800;
+            @include font($primaryFont,24,bold,normal,30);
+            padding-bottom: size(48);
+            padding-top:size(20);
+            @include breakpoint(mobile768) {
+                @include font($primaryFont,36,bold,normal,40);
+            }
+
+         }
+
+        
+    }
+     p {
+        display: none;
+     }
+}
+

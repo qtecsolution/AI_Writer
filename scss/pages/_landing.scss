@@ -2,15 +2,22 @@
 @use '../partials' as *;
 
 .body-landing {
-    background-image: url('../../assets/images/landing/small-bg.svg');
+    // background-image: url('../../assets/images/landing/small-bg.svg');
     background-repeat: no-repeat;
     background-position: top center;
     background-size: size(1000);
+   
     @include breakpoint(tab992) {
         background-size: contain;
     }
  
     
+}
+
+.body-blog {
+    background: #F5F7FB;
+  
+   
 }
 
 .hero-content {
@@ -19,7 +26,7 @@
    gap: size(24); 
    text-align: center;
    
-
+    
    .hero-title {
     color: $gray-800;
     @include font($primaryFont,26,bold,normal,36);
