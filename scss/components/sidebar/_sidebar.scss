@@ -3,7 +3,7 @@
 
 .sidebar {
     background: $white;
-    width: size(140);
+    width: size(200);
     height: 100vh;
     position: fixed;
     top: 0;
@@ -14,7 +14,8 @@
     @include breakpoint(tab992) {
       @include flex-column;
       gap: size(60);
-      padding: size(16) size(0);
+      padding: size(16) size(16);
+      padding-left: size(24);
     }
 
     &-header {
@@ -23,13 +24,20 @@
 
     &-body {
       @include flex-column;
-      align-items: center;
+      align-items: flex-start;
       gap: size(40);
     }
     &-menu {
       @include list-vertical;
       gap: size(40);
-      align-items: center;
+      align-items: flex-start;
+
+      &-link {
+        @include flex;
+        gap: size(14);
+        color: $gray-700;
+        @include font($primaryFont,14,normal,normal,18);
+      }
     }
   
     // &-header {
