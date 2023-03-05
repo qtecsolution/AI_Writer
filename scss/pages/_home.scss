@@ -70,12 +70,11 @@
 
 
 .my-projects {
-    overflow-x: auto;
+   
     @include hideScrollbar;
     @include flex-column;
     gap: size(0);
 
-    
     
     &-header {
        
