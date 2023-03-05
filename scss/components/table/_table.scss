@@ -2,7 +2,7 @@
 @use '../../partials'as *;
 
 #projectTable {
-    min-width: size(1600) !important;
+   max-width: 100% !important;
    
 }
 #projectTable_filter {
@@ -291,7 +291,7 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 300px;
+    max-width: size(200);
  }
 
  table {

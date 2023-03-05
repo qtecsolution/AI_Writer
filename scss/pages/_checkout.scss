@@ -10,27 +10,7 @@
 }
 
 
-.breadcrumb {
-    padding: size(30) size(0);
-    
-    &-item {
-       
-        &::before {
-            content: '';
-        }
 
-        svg {
-            
-            fill: $gray-600;
-        }
-    }
-}
-
-.breadcrumb-item+.breadcrumb-item {
-	&::before {
-		content: '';
-	}
-}
 
 .payment-name {
     color: $gray-800 ;
