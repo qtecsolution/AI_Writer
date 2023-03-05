@@ -883,8 +883,8 @@
                         </div>
                     </div>
 
-
                 </div>
+                <div class="swiper-pagination  mb-2"></div>
             </div>
 
         </div>
@@ -1234,6 +1234,10 @@
         });
 
         var swiper = new Swiper(".mySwiper", {
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: true,
+            },
             breakpoints: {
                 768: {
                     slidesPerView: 2,

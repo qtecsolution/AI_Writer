@@ -21,36 +21,37 @@
 
     <style>
         .arrow-icon svg {
-        transition: transform 0.3s ease-in-out;
+            transition: transform 0.3s ease-in-out;
         }
 
         .arrow-icon.rotate svg {
-        transform: rotate(180deg);
+            transform: rotate(180deg);
         }
 
+
         .swiper {
-      width: 100%;
-      height: 100%;
-    }
+            width: 100%;
+            height: 100%;
+        }
 
-    .swiper-slide {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .swiper-slide a {
-        background-color: white;
-        width: 100%;
-        
-    }
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
 
-    .swiper-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
+        .swiper-slide a {
+            background-color: white;
+            width: 100%;
 
+        }
+
+        .swiper-slide img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
     </style>
 
 
@@ -60,53 +61,52 @@
 <body>
     <!-- SIDEBAR MENU START -->
     <aside class="sidebar">
-        <div class="sidebar-header">
-            <a href="index.html"><h3 class="logo-name">type.ez</h3></a>
+        <div class="sidebar-header text-center">
+            <a href="index.html">
+                <h3 class="logo-name">type.ez</h3>
+            </a>
         </div>
         <div class="sidebar-body">
-            <ul class="sidebar-menu">
-                <li class="sidebar-menu-item">
-                    <a href="create-post.html" class="add-btn" data-bs-toggle="tooltip" data-bs-title="generate your content "
-                    data-bs-placement="right" >+</a>
+            <!-- user  -->
+            <ul class="sidebar-menu  d-none">
+
+                <li>
+                    <a href="index.html" class="sidebar-menu-link">
+                        <img src="assets/icons/home.svg" alt="home icon ">
+                        <span class="text">User Dashboard</span>
+                    </a>
                 </li>
                 <li>
-                    <a href="index.html" class="sidebar-menu-link" 
-                    >
-                    <img src="assets/icons/home.svg" alt="home icon ">
-                    <span class="text">User Dashboard</span>
-                </a>
+                    <a href="index.html" class="sidebar-menu-link">
+                        <img src="assets/icons/content.svg" alt="home icon ">
+                        <span class="text">Content generate</span>
+                    </a>
                 </li>
-                <li>
-                    <a href="#" class="sidebar-menu-link" >
+                <li data-bs-toggle="collapse" data-bs-target="#generateDropdown">
+                    <a href="#" class="sidebar-menu-link">
                         <img src="assets/icons/image.svg" alt="user icon ">
                         <span class="text">generate image</span>
-                    </a>
-                </li>
-                <li data-bs-toggle="collapse" data-bs-target="#collapseExample">
-                    <a href="#" class="sidebar-menu-link" >
-                        <img src="assets/icons/zap.svg" alt=" icon ">
-                        <span class="text">Manage Plane</span>
                         <span class="arrow-icon">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
                         </span>
-                    </a> 
-
-                      <div class="collapse" id="collapseExample">
-                        <div class="sidebar-drop">
-                         <ul>
-                            <li><a href="#">Item </a></li>
-                            <li><a href="#">Item </a></li>
-                            <li><a href="#">Item </a></li>
-                         </ul>
-                        </div>
-                      </div>
-                </li>
-                <li>
-                    <a href="#" class="sidebar-menu-link">
-                        <img src="assets/icons/layers.svg" alt="layers icon ">
-                        <span class="text">Layers</span>
                     </a>
+
+                    <div class="collapse" id="generateDropdown">
+                        <div class="sidebar-drop">
+                            <ul>
+                                <li><a href="#">New Image</a></li>
+                                <li><a href="#">Image Variation </a></li>
+
+                            </ul>
+                        </div>
+                    </div>
                 </li>
+
+
                 <li>
                     <a href="#" class="sidebar-menu-link">
                         <img src="assets/icons/saved.svg" alt="layers icon ">
@@ -126,28 +126,155 @@
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="sidebar-menu-link" >
-                        <img src="assets/icons/credit-card.svg" alt="credit card  icon "> 
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/credit-card.svg" alt="credit card  icon ">
                         <span class="text">Purchase plane</span>
 
                     </a>
                 </li>
                 <li>
-                    <a href="#" class="sidebar-menu-link" >
-                        <img src="assets/icons/reports.svg" alt="credit card  icon "> 
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/reports.svg" alt="credit card  icon ">
                         <span class="text">Reports</span>
 
                     </a>
                 </li>
-                <li>
-                    <a href="create-post.html" class="sidebar-menu-link" >
-                        <img src="assets/icons/SEO.svg" alt="  seo icon ">
-                        <span class="title">SEO</span>
-                </a>
-                </li>
+
             </ul>
-         
-            
+
+            <!-- admin  -->
+
+            <ul class="sidebar-menu  ">
+
+                <li>
+                    <a href="index.html" class="sidebar-menu-link">
+                        <img src="assets/icons/home.svg" alt="home icon ">
+                        <span class="text">admin </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" class="sidebar-menu-link">
+                        <img src="assets/icons/content.svg" alt="home icon ">
+                        <span class="text">Manage Use Case</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="index.html" class="sidebar-menu-link">
+                        <img src="assets/icons/users.svg" alt="home icon ">
+                        <span class="text">Users List</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/users.svg" alt="home icon ">
+                        <span class="text">Admin List</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/users.svg" alt="home icon ">
+                        <span class="text">Manage plane</span>
+                    </a>
+                </li>
+                <li data-bs-toggle="collapse" data-bs-target="#manageBlog">
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/image.svg" alt="user icon ">
+                        <span class="text">Manage Blog</span>
+                        <span class="arrow-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+                    </a>
+
+                    <div class="collapse" id="manageBlog">
+                        <div class="sidebar-drop">
+                            <ul>
+                                <li><a href="#">Category</a></li>
+                                <li><a href="#">Blog</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/users.svg" alt="home icon ">
+                        <span class="text">Manage Faq</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/users.svg" alt="home icon ">
+                        <span class="text">Page Builder</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/users.svg" alt="home icon ">
+                        <span class="text">Payment Method</span>
+                    </a>
+                </li>
+
+
+
+
+                <li data-bs-toggle="collapse" data-bs-target="#reports">
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/reports.svg" alt="credit card  icon ">
+                        <span class="text">Reports</span>
+                        <span class="arrow-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+
+                    </a> 
+
+                    <div class="collapse" id="reports">
+                        <div class="sidebar-drop">
+                            <ul>
+                                <li><a href="#">Sales Reports</a></li>
+                                <li><a href="#">Google Analytics</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+
+                <li data-bs-toggle="collapse" data-bs-target="#settings">
+                    <a href="#" class="sidebar-menu-link">
+                        <img src="assets/icons/reports.svg" alt="credit card  icon ">
+                        <span class="text">Settings</span>
+                        <span class="arrow-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                stroke-linejoin="round" class="feather feather-chevron-down">
+                                <polyline points="6 9 12 15 18 9" />
+                            </svg>
+                        </span>
+
+                    </a> 
+
+                    <div class="collapse" id="settings">
+                        <div class="sidebar-drop">
+                            <ul>
+                                <li><a href="#">Seo Settings</a></li>
+                                <li><a href="#">Mail Configure</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+             
+
+            </ul>
+
+
         </div>
     </aside>
     <!-- SIDEBAR MENU END -->
@@ -157,7 +284,8 @@
         <!-- HEADER SECTION START -->
         <header class="header">
             <!-- hamburger icon  -->
-            <button class="btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><img src="assets/icons/menu.svg" alt=""></button>
+            <button class="btn d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileMenu"><img
+                    src="assets/icons/menu.svg" alt=""></button>
             <!-- MOBILE-LOGO -->
             <h3 class="logo-name d-lg-none ">type.ez</h3>
             <!-- ICON-MENU START -->
@@ -210,123 +338,132 @@
             <!-- WELCOME SECTION END -->
 
             <!-- POPULAR TEMPLATE  SECTION START -->
-            
+
             <section class="popular-template ">
                 <div class="popular-template-header">
                     <h4 class="header-title">Popular Template</h4>
                 </div>
-               
+
                 <div class="popular-template-body">
-                     <!-- Swiper -->
-                <div class=" swiper templateSwiper">
-                    <div class="swiper-wrapper pb-5">
-                    <div class="swiper-slide">
-                        <a href="create-post.html" class="template-card">
-                            <figure class="card-img">
-                                <img src="assets/images/icons/box.svg " alt="">
-                            </figure>
-                            <h3 class="card-title">Product Description</h3>
-    
-                            <p class="card-des">Generate beautifully written product descriptions to increase sales.</p>
-    
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="create-post.html" class="template-card ">
-    
-                            <figure class="card-img">
-                                <img src="assets/images/icons/writting.svg" alt="blog image ">
-                            </figure>
-    
-                            <h3 class="card-title">Blog Writing</h3>
-                            <p class="card-des">The Blog Writing template takes your topic from idea to outline and then
-                                generate perfect text.</p>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="create-post.html" class="template-card">
-    
-                            <figure class="card-img">
-                                <img src="assets/images/icons/social-caption.svg " alt="socila media caption ">
-                            </figure>
-    
-                            <h3 class="card-title">Social Media Caption</h3>
-                            <p class="card-des">Generate beautifully written product descriptions to increase sales.</p>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a class="template-card" href="create-post.html">
-    
-                            <figure class="card-img">
-                                <img src="assets/images/icons/google.svg " alt="google">
-                            </figure>
-    
-                            <h3 class="card-title">Google SEO</h3>
-                            <p class="card-des">The best-performing Google ad copy converts visitors into customer! So
-                                don’t miss it.</p>
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="create-post.html" class="template-card">
-                            <figure class="card-img">
-                                <img src="assets/images/icons/box.svg " alt="">
-                            </figure>
-                            <h3 class="card-title">Product Description</h3>
-    
-                            <p class="card-des">Generate beautifully written product descriptions to increase sales.</p>
-    
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="create-post.html" class="template-card">
-                            <figure class="card-img">
-                                <img src="assets/images/icons/box.svg " alt="">
-                            </figure>
-                            <h3 class="card-title">Product Description</h3>
-    
-                            <p class="card-des">Generate beautifully written product descriptions to increase sales.</p>
-    
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="create-post.html" class="template-card">
-                            <figure class="card-img">
-                                <img src="assets/images/icons/box.svg " alt="">
-                            </figure>
-                            <h3 class="card-title">Product Description</h3>
-    
-                            <p class="card-des">Generate beautifully written product descriptions to increase sales.</p>
-    
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="create-post.html" class="template-card">
-                            <figure class="card-img">
-                                <img src="assets/images/icons/box.svg " alt="">
-                            </figure>
-                            <h3 class="card-title">Product Description</h3>
-    
-                            <p class="card-des">Generate beautifully written product descriptions to increase sales.</p>
-    
-                        </a>
-                    </div>
-                    <div class="swiper-slide">
-                        <a href="create-post.html" class="template-card">
-                            <figure class="card-img">
-                                <img src="assets/images/icons/box.svg " alt="">
-                            </figure>
-                            <h3 class="card-title">Product Description</h3>
-    
-                            <p class="card-des">Generate beautifully written product descriptions to increase sales.</p>
-    
-                        </a>
-                    </div>
-                    </div>
-                    <div class="swiper-pagination mt-5"></div>
+                    <!-- Swiper -->
+                    <div class=" swiper templateSwiper">
+                        <div class="swiper-wrapper pb-5">
+                            <div class="swiper-slide">
+                                <a href="create-post.html" class="template-card">
+                                    <figure class="card-img">
+                                        <img src="assets/images/icons/box.svg " alt="">
+                                    </figure>
+                                    <h3 class="card-title">Product Description</h3>
+
+                                    <p class="card-des">Generate beautifully written product descriptions to increase
+                                        sales.</p>
+
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="create-post.html" class="template-card ">
+
+                                    <figure class="card-img">
+                                        <img src="assets/images/icons/writting.svg" alt="blog image ">
+                                    </figure>
+
+                                    <h3 class="card-title">Blog Writing</h3>
+                                    <p class="card-des">The Blog Writing template takes your topic from idea to outline
+                                        and then
+                                        generate perfect text.</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="create-post.html" class="template-card">
+
+                                    <figure class="card-img">
+                                        <img src="assets/images/icons/social-caption.svg " alt="socila media caption ">
+                                    </figure>
+
+                                    <h3 class="card-title">Social Media Caption</h3>
+                                    <p class="card-des">Generate beautifully written product descriptions to increase
+                                        sales.</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a class="template-card" href="create-post.html">
+
+                                    <figure class="card-img">
+                                        <img src="assets/images/icons/google.svg " alt="google">
+                                    </figure>
+
+                                    <h3 class="card-title">Google SEO</h3>
+                                    <p class="card-des">The best-performing Google ad copy converts visitors into
+                                        customer! So
+                                        don’t miss it.</p>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="create-post.html" class="template-card">
+                                    <figure class="card-img">
+                                        <img src="assets/images/icons/box.svg " alt="">
+                                    </figure>
+                                    <h3 class="card-title">Product Description</h3>
+
+                                    <p class="card-des">Generate beautifully written product descriptions to increase
+                                        sales.</p>
+
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="create-post.html" class="template-card">
+                                    <figure class="card-img">
+                                        <img src="assets/images/icons/box.svg " alt="">
+                                    </figure>
+                                    <h3 class="card-title">Product Description</h3>
+
+                                    <p class="card-des">Generate beautifully written product descriptions to increase
+                                        sales.</p>
+
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="create-post.html" class="template-card">
+                                    <figure class="card-img">
+                                        <img src="assets/images/icons/box.svg " alt="">
+                                    </figure>
+                                    <h3 class="card-title">Product Description</h3>
+
+                                    <p class="card-des">Generate beautifully written product descriptions to increase
+                                        sales.</p>
+
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="create-post.html" class="template-card">
+                                    <figure class="card-img">
+                                        <img src="assets/images/icons/box.svg " alt="">
+                                    </figure>
+                                    <h3 class="card-title">Product Description</h3>
+
+                                    <p class="card-des">Generate beautifully written product descriptions to increase
+                                        sales.</p>
+
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="create-post.html" class="template-card">
+                                    <figure class="card-img">
+                                        <img src="assets/images/icons/box.svg " alt="">
+                                    </figure>
+                                    <h3 class="card-title">Product Description</h3>
+
+                                    <p class="card-des">Generate beautifully written product descriptions to increase
+                                        sales.</p>
+
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-pagination mt-5"></div>
                     </div>
                 </div>
 
-               
+
 
 
 
@@ -339,7 +476,7 @@
 
                 <div class="my-projects-header">
                     <h4 class="header-title">My Projects</h4>
-                </div> 
+                </div>
                 <div class="searchbox">
                     <span class="search-icon">
                         <i class="fa fa-search" aria-hidden="true"></i>
@@ -359,7 +496,8 @@
                         <table id="projectTable" class="project-table">
                             <thead>
                                 <tr class="bg-white">
-                                    <td data-orderable="false"> <input type="checkbox" name="row-check"  class="form-check-input"></td>
+                                    <td data-orderable="false"> <input type="checkbox" name="row-check"
+                                            class="form-check-input"></td>
                                     <td data-orderable="false">Post Title</td>
                                     <td data-orderable="false">Image </td>
                                     <td>Platform </td>
@@ -375,7 +513,7 @@
 
                                 <tr class="bg-white">
                                     <td class="bg-white">
-                                        <input type="checkbox" name="row-check"  class="form-check-input">
+                                        <input type="checkbox" name="row-check" class="form-check-input">
                                     </td>
                                     <td> 1Technology is Revolutionizing Marketing Strategies</td>
                                     <td>
@@ -401,7 +539,7 @@
                                     <td>
                                         <div class="action-wrapper">
                                             <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
-                                      
+
                                             <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
@@ -410,10 +548,10 @@
 
                                 <tr>
                                     <td class="bg-white">
-                                        <input type="checkbox" name="row-check"  class="form-check-input">
+                                        <input type="checkbox" name="row-check" class="form-check-input">
                                     </td>
                                     <td>
-                                        2How bd  Technology is Revolutionizing Marketing StrategiesHow Technology is
+                                        2How bd Technology is Revolutionizing Marketing StrategiesHow Technology is
                                         Revolutionizing Marketing StrategiesHow Technology is Revolutionizing Marketing
                                         StrategiesHow Technology is Revolutionizing Marketing Strategies
                                     </td>
@@ -440,7 +578,7 @@
                                     <td class="bg-whtite">
                                         <div class="action-wrapper">
                                             <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
-                                      
+
                                             <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
                                     </td>
@@ -448,7 +586,7 @@
 
                                 <tr>
                                     <td class="bg-white">
-                                        <input type="checkbox" name="row-check"  class="form-check-input">
+                                        <input type="checkbox" name="row-check" class="form-check-input">
                                     </td>
                                     <td>How Technology is Revolutionizing Marketing Strategies</td>
                                     <td>
@@ -474,7 +612,7 @@
                                     <td class="bg-whtite">
                                         <div class="action-wrapper">
                                             <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
-                                      
+
                                             <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
@@ -483,7 +621,7 @@
 
                                 <tr>
                                     <td class="bg-white">
-                                         <input type="checkbox" name="row-check"  class="form-check-input">
+                                        <input type="checkbox" name="row-check" class="form-check-input">
                                     </td>
                                     <td>How Technology is Revolutionizing Marketing Strategies</td>
                                     <td>
@@ -509,7 +647,7 @@
                                     <td class="bg-whtite">
                                         <div class="action-wrapper">
                                             <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
-                                      
+
                                             <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
@@ -518,7 +656,7 @@
 
                                 <tr>
                                     <td class="bg-white">
-                                         <input type="checkbox" name="row-check"  class="form-check-input">
+                                        <input type="checkbox" name="row-check" class="form-check-input">
                                     </td>
                                     <td>How Technology is Revolutionizing Marketing Strategies</td>
                                     <td>
@@ -544,7 +682,7 @@
                                     <td class="bg-whtite">
                                         <div class="action-wrapper">
                                             <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
-                                      
+
                                             <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
@@ -553,7 +691,7 @@
 
                                 <tr>
                                     <td class="bg-white">
-                                         <input type="checkbox" name="row-check"  class="form-check-input">
+                                        <input type="checkbox" name="row-check" class="form-check-input">
                                     </td>
                                     <td>How Technology is Revolutionizing Marketing Strategies</td>
                                     <td>
@@ -579,7 +717,7 @@
                                     <td class="bg-whtite">
                                         <div class="action-wrapper bg-white">
                                             <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
-                                      
+
                                             <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
@@ -587,7 +725,7 @@
                                 </tr>
                                 <tr>
                                     <td class="bg-white">
-                                         <input type="checkbox" name="row-check"  class="form-check-input">
+                                        <input type="checkbox" name="row-check" class="form-check-input">
                                     </td>
                                     <td>How Technology is Revolutionizing Marketing Strategies</td>
                                     <td>
@@ -613,7 +751,7 @@
                                     <td class="bg-white">
                                         <div class="action-wrapper bg-white">
                                             <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
-                                      
+
                                             <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
@@ -621,7 +759,7 @@
                                 </tr>
                                 <tr>
                                     <td class="bg-white">
-                                         <input type="checkbox" name="row-check"  class="form-check-input">
+                                        <input type="checkbox" name="row-check" class="form-check-input">
                                     </td>
                                     <td>How Technology is Revolutionizing Marketing Strategies</td>
                                     <td>
@@ -647,7 +785,7 @@
                                     <td class="bg-white">
                                         <div class="action-wrapper">
                                             <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
-                                      
+
                                             <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
@@ -655,7 +793,7 @@
                                 </tr>
                                 <tr>
                                     <td class="bg-white">
-                                         <input type="checkbox" name="row-check"  class="form-check-input">
+                                        <input type="checkbox" name="row-check" class="form-check-input">
                                     </td>
                                     <td>How Technology is Revolutionizing Marketing Strategies</td>
                                     <td>
@@ -681,7 +819,7 @@
                                     <td>
                                         <div class="action-wrapper">
                                             <a href="javascript:voide(0)"><img src="assets/icons/delete.svg" alt=""></a>
-                                      
+
                                             <a href="edit-post.html"><img src="assets/icons/edit.svg" alt=""></a>
                                         </div>
 
@@ -689,7 +827,7 @@
                                 </tr>
 
 
-                             
+
 
 
                             </tbody>
@@ -708,14 +846,14 @@
 
 
     <!-- MOBILE OFFCANVAS MENU  -->
-    <div class="offcanvas offcanvas-start"  tabindex="-1" id="mobileMenu" aria-labelledby="staticBackdropLabel">
+    <div class="offcanvas offcanvas-start" tabindex="-1" id="mobileMenu" aria-labelledby="staticBackdropLabel">
         <div class="offcanvas-header">
             <a href="index.html">
                 <h3 class="logo-name text-center header-logo">type.ez</h3>
             </a>
 
             <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close">
-                <svg  width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M20 20L4 4M20 4L4 20" stroke="#121212" stroke-width="2" stroke-linecap="round"></path>
                 </svg>
 
@@ -736,11 +874,11 @@
                 <li class="mobilelist-item" data-bs-dismiss="offcanvas">
                     <a href="login.html" class="mobilelist-link">Login</a>
                 </li>
-                
+
             </ul>
         </div>
-        </div>
-      </div>
+    </div>
+    </div>
 
 
 
@@ -771,37 +909,37 @@
 
     <script>
 
-    var swiper = new Swiper(".templateSwiper", {
-        slidesPerView: 1,
-        spaceBetween: 10,
-        pagination: {
-            el: ".swiper-pagination",
-            clickable: true,
-        },
-        breakpoints: {
-            420: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+        var swiper = new Swiper(".templateSwiper", {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
             },
-            640: {
-            slidesPerView: 2,
-            spaceBetween: 20,
+            breakpoints: {
+                420: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                640: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                768: {
+                    slidesPerView: 3,
+                    spaceBetween: 20,
+                },
+                1100: {
+                    slidesPerView: 4,
+                    spaceBetween: 20,
+                },
+                1300: {
+                    slidesPerView: 5,
+                    spaceBetween: 8,
+                },
             },
-            768: {
-            slidesPerView: 3,
-            spaceBetween: 20,
-            },
-            1100: {
-            slidesPerView: 4,
-            spaceBetween: 20,
-            },
-            1300: {
-            slidesPerView: 5,
-            spaceBetween: 8,
-            },
-        },
         });
-                
+
         $(document).ready(function () {
             var table = $('#projectTable').DataTable({
                 info: false,
@@ -813,13 +951,13 @@
                     },
                     "lengthMenu": "Show _MENU_ entries ",
                     pageLength: 10,
-                    
 
 
-                }, 
-                fixedColumns:   {
+
+                },
+                fixedColumns: {
                     left: 1,
-                   
+
                 }
 
 
@@ -837,8 +975,8 @@
         const menuItem = document.querySelector('li[data-bs-target="#collapseExample"]');
         const arrowIcon = menuItem.querySelector('.arrow-icon');
 
-        menuItem.addEventListener('click', function() {
-        arrowIcon.classList.toggle('rotate');
+        menuItem.addEventListener('click', function () {
+            arrowIcon.classList.toggle('rotate');
         });
 
 
