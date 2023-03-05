@@ -16,6 +16,7 @@
       gap: size(60);
       padding: size(16) size(16);
       padding-left: size(24);
+      padding-right: size(0);
     }
 
     &-header {
@@ -26,17 +27,22 @@
       @include flex-column;
       align-items: flex-start;
       gap: size(40);
+      overflow-y: auto;
+      @include  hideScrollbar;
     }
     &-menu {
       @include list-vertical;
       gap: size(40);
       align-items: flex-start;
+      
+     
 
       &-link {
         @include flex;
         gap: size(14);
         color: $gray-700;
         @include font($primaryFont,14,normal,normal,18);
+        align-items: center;
       }
     }
   
@@ -239,4 +245,28 @@
     // } 
   
    
+  }
+
+  .sidebar-drop {
+    @include flex-column;
+   
+
+    padding-top: size(20);
+
+    ul {
+      @include list-vertical;
+      gap: size(10);
+      li {
+
+      }
+      a {
+        color: $gray-700;
+        display: block;
+        padding: size(10);
+        @include hover {
+          background: $gray-100;
+        }
+      }
+
+    }
   }

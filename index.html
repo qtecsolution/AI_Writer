@@ -19,7 +19,16 @@
     <!-- MAIN CSS  -->
     <link rel="stylesheet" href="assets/css/style.min.css">
 
+    <style>
+        .arrow-icon svg {
+        transition: transform 0.3s ease-in-out;
+        }
 
+        .arrow-icon.rotate svg {
+        transform: rotate(180deg);
+        }
+
+    </style>
 
 
 
@@ -50,11 +59,24 @@
                         <span class="text">Users</span>
                     </a>
                 </li>
-                <li>
+                <li data-bs-toggle="collapse" data-bs-target="#collapseExample">
                     <a href="#" class="sidebar-menu-link" >
                         <img src="assets/icons/zap.svg" alt=" icon ">
                         <span class="text">Manage Plane</span>
-                    </a>
+                        <span class="arrow-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"/></svg>
+                        </span>
+                    </a> 
+
+                      <div class="collapse" id="collapseExample">
+                        <div class="sidebar-drop">
+                         <ul>
+                            <li><a href="#">Item </a></li>
+                            <li><a href="#">Item </a></li>
+                            <li><a href="#">Item </a></li>
+                         </ul>
+                        </div>
+                      </div>
                 </li>
                 <li>
                     <a href="#" class="sidebar-menu-link">
@@ -707,6 +729,12 @@
             $('#searchINputField').keyup(function () {
                 table.search($(this).val()).draw();
             })
+        });
+        const menuItem = document.querySelector('li[data-bs-target="#collapseExample"]');
+        const arrowIcon = menuItem.querySelector('.arrow-icon');
+
+        menuItem.addEventListener('click', function() {
+        arrowIcon.classList.toggle('rotate');
         });
 
 
