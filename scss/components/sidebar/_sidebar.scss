@@ -263,6 +263,8 @@
         color: $gray-700;
         display: block;
         padding: size(10);
+        @include font($primaryFont,14,normal,normal,18);
+
         @include hover {
           background: $gray-100;
         }

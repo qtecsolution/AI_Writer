@@ -1,7 +1,9 @@
 @use '../../global'as *;
 @use '../../partials'as *;
 
-
+#projectTable {
+    min-width: size(1600) !important;
+}
 #projectTable_filter {
     display: none !important;
     visibility: hidden !important;
@@ -30,7 +32,7 @@
 } 
 
 .datatable {
-    display: none;
+    background-color: red;
     thead {
         display: none;
         td {
@@ -63,15 +65,43 @@
    input {
     flex-grow: 1;
     padding-left: size(30);
+    max-width: size(130);
+    @include font($primaryFont,12,medium,normal,20);
+
+    @include breakpoint(mobile576) {
+    @include font($primaryFont,14,medium,normal,20);
+       
+        max-width: size(400);
+       
+
+    }
+
+    &::placeholder {
+    @include font($primaryFont,12,medium,normal,20);
+    @include breakpoint(mobile576) {
+    @include font($primaryFont,14,medium,normal,20);
+ 
+
+    }
+
+    } 
+
    } 
 
    .right-text {
-    @include font($primaryFont,14,medium,normal,20);
+    @include font($primaryFont,12,medium,normal,20);
     color: #D92D20;
     .selected {
         color: $gray-800;
+    } 
+
+    @include breakpoint(mobile576) {
+    @include font($primaryFont,14,medium,normal,20);
+
     }
-   }
+   } 
+
+
 }
 .dataTables_wrapper {
     z-index: 1 !important; /* lower value */
@@ -79,7 +109,7 @@
   
 .project-table {
     border-bottom: 0 !important;
-    width: 100% !important;
+   
      
     thead {
         
@@ -94,6 +124,9 @@
     }
 
     tbody {
+        tr {
+            
+        }
       td {
         border-bottom: 1px solid $gray-200;
         color: $gray-600 !important;
@@ -115,6 +148,7 @@
             @include flex;
             gap: size(24);
             align-items: center;
+            background-color: $white;
             
             a {
                 color: $gray-500;
@@ -122,7 +156,14 @@
                 
                 
             }
+
+            img {
+                @include square(20);
+                max-width: none;
+            }
         }
+      
+
 
 
       }
@@ -132,6 +173,7 @@
         td {
             &:first-child {
                 width: size(20) !important;
+                
                 
             }
         }
@@ -252,7 +294,6 @@
     white-space: nowrap;
     input {
         font-size: size(14);
-
     }
 }
 
@@ -266,3 +307,27 @@
     visibility: hidden;
     display: none;
 }
+
+@media screen and (max-width: 768px) {
+    .dataTables_wrapper table td:last-child {
+      display: table-cell !important;
+      background: $white;
+      padding: 0;
+      padding-left: size(10);
+     
+    }
+  }
+  
+
+  .dataTables_wrapper table td:last-child {
+    background: $white;
+   
+  }
+  .dataTables_wrapper table td:first-child {
+    background: $white;
+     z-index: 1000;
+     padding: 0;
+     max-width: min-content;
+     width: 10px;
+   
+  }
