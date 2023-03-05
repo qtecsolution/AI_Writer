@@ -174,7 +174,15 @@
         td {
             &:first-child {
                 width: size(20) !important;
-                
+                padding-right: 0 !important;
+                padding-left: size(10) !important;
+                 &::after {
+                    display: none !important;
+                 }
+                 &::before {
+                   
+                    display: none !important;
+                 }
                 
             }
         }
