@@ -884,7 +884,8 @@
                     </div>
 
                 </div>
-                <div class="swiper-pagination  mb-2"></div>
+                
+                <div class="swiper-pagination "></div>
             </div>
 
         </div>
@@ -895,7 +896,7 @@
      <section class="faq">
         <div class="container">
 
-            <div class="row g-4 align-items-center">
+            <div class="row g-4 align-items-center pt-2">
 
                 <div class="col-12" data-aos="fade-up" data-aos-duration="1000">
                     <div class="section-header">
@@ -1235,9 +1236,10 @@
 
         var swiper = new Swiper(".mySwiper", {
             pagination: {
-                el: ".swiper-pagination",
-                dynamicBullets: true,
-            },
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      
             breakpoints: {
                 768: {
                     slidesPerView: 2,
