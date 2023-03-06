@@ -50,6 +50,11 @@
         width: 100%;
         padding: size(10) size(0);
         padding-left: size(26);
+        @include radius(4);
+
+        &.active{
+          background: darken(#ECF2FF,5%);
+        }
       }
     }
   
