@@ -160,6 +160,7 @@
    z-index: 100;
     .header-desk {
         @include flex-between;
+        align-items: center;
 
         .header-logo {
 

@@ -3,13 +3,13 @@
 @use '../partials' as *;
 
 .blog-cards {
-    padding-top: size(50);
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
     @include breakpoint(tab992) {
         grid-template-columns: 1fr 1fr;
-        padding-top: size(100);
+        gap: size(30)
+       
     }
    
 }
@@ -181,5 +181,63 @@
     img {
         @include wh100;
         object-fit: contain;
+    }
+}
+
+
+// background for blog page 
+
+.bg-blog{
+  background:  rgba(151, 171, 255, 0.05);
+
+}
+
+.category-list {
+ 
+    @include list-horizontal;
+    gap: size(10);
+    flex-wrap: wrap;
+    padding: size(50) size(0);
+    &-item {
+        display: inline-block;
+        @include radius(100);
+        &.active {
+            background: $linear-main;
+            color: $white;
+            border-color: transparent;
+            a {
+                color: $white;
+                &:hover {
+                    color: $white;
+                }
+            }
+        }
+        
+
+    }
+
+    &-link {
+        padding: size(10) size(26);
+        color: $gray-800;
+        display: inline-block;
+        background: linear-gradient(110.99deg, rgba(151, 171, 255, 0.05) -6.41%, rgba(18, 53, 151, 0.05) 106.7%);
+        border: 1px solid rgba(44, 76, 172, 0.05);
+        @include radius(100);
+        color: $gray-800;
+        @include font($primaryFont,14,medium,normal,17);
+        @include hover {
+            color: $gray-900;
+        }
+
+        @include breakpoint(mobile576) {
+        padding: size(14) size(20);
+        }
+
+        @include breakpoint(mobile768) {
+            padding: size(18) size(24);
+        }
+        
+
+       
     }
 }
