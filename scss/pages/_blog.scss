@@ -159,8 +159,25 @@
 
          }
 
+         ul {
+            padding-left: size(40);
+         }
+
         
     }
     
 }
 
+
+
+.blog-detail-image {
+    @include w100;
+    height: auto;
+    overflow: hidden;
+    max-height: size(500);
+    @include radius(30);
+    img {
+        @include wh100;
+        object-fit: contain;
+    }
+}
