@@ -19,42 +19,6 @@
     <!-- MAIN CSS  -->
     <link rel="stylesheet" href="assets/css/style.min.css">
 
-    <style>
-        .arrow-icon svg {
-            transition: transform 0.3s ease-in-out;
-        }
-
-        .arrow-icon.rotate svg {
-            transform: rotate(180deg);
-        }
-
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-        }
-
-        .swiper-slide {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .swiper-slide a {
-            background-color: white;
-            width: 100%;
-
-        }
-
-        .swiper-slide img {
-            display: block;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-    </style>
-
-
 
 </head>
 
@@ -82,8 +46,8 @@
                         <span class="text">Content generate</span>
                     </a>
                 </li>
-                <li data-bs-toggle="collapse" data-bs-target="#generateDropdown">
-                    <a href="#" class="sidebar-menu-link active">
+                <li>
+                    <a href="#" class="sidebar-menu-link active" data-bs-toggle="collapse" data-bs-target="#generateDropdown">
                         <img src="assets/icons/image.svg" alt="user icon ">
                         <span class="text">generate image</span>
                         <span class="arrow-icon">
@@ -176,9 +140,9 @@
                         <span class="text">Manage plane</span>
                     </a>
                 </li>
-                <li data-bs-toggle="collapse" data-bs-target="#manageBlog">
-                    <a href="#" class="sidebar-menu-link">
-                        <img src="assets/icons//blog.svg" alt="user icon ">
+                <li>
+                    <a href="#" class="sidebar-menu-link" data-bs-toggle="collapse" data-bs-target="#manageBlog">
+                        <img src="assets/icons/blog.svg" alt="user icon ">
                         <span class="text">Manage Blog</span>
                         <span class="arrow-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
@@ -221,8 +185,8 @@
 
 
 
-                <li data-bs-toggle="collapse" data-bs-target="#reports">
-                    <a href="#" class="sidebar-menu-link">
+                <li>
+                    <a href="#" class="sidebar-menu-link" data-bs-toggle="collapse" data-bs-target="#reports">
                         <img src="assets/icons/reports.svg" alt="credit card  icon ">
                         <span class="text">Reports</span>
                         <span class="arrow-icon">
@@ -247,10 +211,10 @@
                 </li>
 
                 <li>
-                    <a href="#" class="sidebar-menu-link">
+                    <a href="#" class="sidebar-menu-link"  data-bs-toggle="collapse" data-bs-target="#settings">
                         <img src="assets/icons/settings.svg" alt="credit card  icon ">
                         <span class="text">Settings</span>
-                        <span class="arrow-icon" data-bs-toggle="collapse" data-bs-target="#settings">
+                        <span class="arrow-icon">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
                                 fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                                 stroke-linejoin="round" class="feather feather-chevron-down">

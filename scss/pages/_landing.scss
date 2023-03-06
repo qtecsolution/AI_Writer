@@ -222,4 +222,15 @@
         height: auto;
         object-fit: contain;
     }
+} 
+
+
+.arrow-icon svg {
+    transition: transform 0.3s ease-in-out;
 }
+
+.arrow-icon.rotate svg {
+    transform: rotate(180deg);
+}
+
+
