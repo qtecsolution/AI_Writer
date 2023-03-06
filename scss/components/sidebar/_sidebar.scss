@@ -258,22 +258,24 @@
     @include flex-column;
    
    
-    background-color: $gray-200;
+    background-color: #ECF2FF;
 
     ul {
       @include list-vertical;
+      
       li {
-
+        
       }
       a {
         color: $gray-700;
         display: block;
         padding: size(10);
         @include font($primaryFont,14,normal,normal,18);
-        padding-left: size(34);
+        padding-left: size(44);
         @include transitionsall;
+        
         @include hover {
-          background: $gray-300;
+          background: darken(#ECF2FF,5%);
         }
       }
 
